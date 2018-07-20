@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+
+    Route::get('/security','SecurityController@index');
+    Route::get('/programming','ProgrammingController@index');
+    Route::get('/notes','NotesController@index');
+    Route::get('/inscripction','InscriptionController@index');
+
+});
