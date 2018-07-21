@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -24,4 +24,5 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/notes','NotesController@index');
     Route::get('/inscripction','InscriptionController@index');
 
+    
 });
