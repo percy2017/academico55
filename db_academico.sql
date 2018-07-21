@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 21-07-2018 a las 02:54:56
--- Versión del servidor: 10.1.26-MariaDB
--- Versión de PHP: 7.1.9
+-- Servidor: localhost:3306
+-- Tiempo de generación: 21-07-2018 a las 05:27:00
+-- Versión del servidor: 5.6.38
+-- Versión de PHP: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -184,7 +182,105 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (58, 8, 'key', 'text', 'Key', 1, 1, 1, 1, 1, 1, NULL, 2),
 (59, 8, 'table_name', 'text', 'Table Name', 0, 1, 1, 1, 1, 1, NULL, 3),
 (60, 8, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 4),
-(61, 8, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 5);
+(61, 8, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 5),
+(62, 10, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(63, 10, 'nombres', 'text', 'Nombres', 1, 1, 1, 1, 1, 1, NULL, 2),
+(64, 10, 'apellidos_paterno', 'text', 'Apellidos Paterno', 1, 1, 1, 1, 1, 1, NULL, 3),
+(65, 10, 'apellidos_materno', 'text', 'Apellidos Materno', 1, 1, 1, 1, 1, 1, NULL, 4),
+(66, 10, 'documento_id', 'text', 'Documento Id', 1, 1, 1, 1, 1, 1, NULL, 5),
+(67, 10, 'num_documento', 'text', 'Num Documento', 1, 1, 1, 1, 1, 1, NULL, 6),
+(68, 10, 'telefono', 'text', 'Telefono', 0, 1, 1, 1, 1, 1, NULL, 7),
+(69, 10, 'avatar', 'text', 'Avatar', 0, 1, 1, 1, 1, 1, NULL, 8),
+(70, 10, 'direccion', 'text', 'Direccion', 0, 1, 1, 1, 1, 1, NULL, 9),
+(71, 10, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 10),
+(72, 10, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 11),
+(73, 10, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 12),
+(74, 10, 'sexualidad_id', 'text', 'Sexualidad Id', 0, 1, 1, 1, 1, 1, NULL, 13),
+(75, 10, 'habilitado', 'text', 'Habilitado', 0, 1, 1, 1, 1, 1, NULL, 14),
+(76, 10, 'telefono2', 'text', 'Telefono2', 0, 1, 1, 1, 1, 1, NULL, 15),
+(77, 11, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(78, 11, 'num_mens', 'text', 'Num Mens', 0, 1, 1, 1, 1, 1, NULL, 2),
+(79, 11, 'monto', 'text', 'Monto', 0, 1, 1, 1, 1, 1, NULL, 3),
+(80, 11, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 4),
+(81, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 5),
+(82, 11, 'fecha_inicio', 'text', 'Fecha Inicio', 0, 1, 1, 1, 1, 1, NULL, 6),
+(83, 11, 'fecha_final', 'text', 'Fecha Final', 0, 1, 1, 1, 1, 1, NULL, 7),
+(84, 11, 'estado', 'text', 'Estado', 0, 1, 1, 1, 1, 1, NULL, 8),
+(85, 11, 'observaciones', 'text', 'Observaciones', 0, 1, 1, 1, 1, 1, NULL, 9),
+(86, 11, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 10),
+(87, 11, 'fecha_pago', 'text', 'Fecha Pago', 0, 1, 1, 1, 1, 1, NULL, 11),
+(88, 11, 'inscripcion_id', 'text', 'Inscripcion Id', 0, 1, 1, 1, 1, 1, NULL, 12),
+(89, 11, 'recibo_id', 'text', 'Recibo Id', 0, 1, 1, 1, 1, 1, NULL, 13),
+(90, 12, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(91, 12, 'numero', 'text', 'Numero', 0, 1, 1, 1, 1, 1, NULL, 2),
+(92, 12, 'concepto', 'text', 'Concepto', 0, 1, 1, 1, 1, 1, NULL, 3),
+(93, 12, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
+(94, 12, 'monto_numeral', 'text', 'Monto Numeral', 0, 1, 1, 1, 1, 1, NULL, 5),
+(95, 12, 'monto_literal', 'text', 'Monto Literal', 0, 1, 1, 1, 1, 1, NULL, 6),
+(96, 12, 'fecha', 'text', 'Fecha', 0, 1, 1, 1, 1, 1, NULL, 7),
+(97, 12, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 8),
+(98, 12, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 9),
+(99, 12, 'estudiante_id', 'text', 'Estudiante Id', 0, 1, 1, 1, 1, 1, NULL, 10),
+(100, 13, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(101, 13, 'fecha_insc', 'text', 'Fecha Insc', 0, 1, 1, 1, 1, 1, NULL, 2),
+(102, 13, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 3),
+(103, 13, 'carrera_id', 'text', 'Carrera Id', 0, 1, 1, 1, 1, 1, NULL, 4),
+(104, 13, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 5),
+(105, 13, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 6),
+(106, 13, 'fecha_inicio', 'text', 'Fecha Inicio', 0, 1, 1, 1, 1, 1, NULL, 7),
+(107, 13, 'estudiante_id', 'text', 'Estudiante Id', 0, 1, 1, 1, 1, 1, NULL, 8),
+(108, 13, 'horario_id', 'text', 'Horario Id', 0, 1, 1, 1, 1, 1, NULL, 9),
+(109, 13, 'observaciones', 'text', 'Observaciones', 0, 1, 1, 1, 1, 1, NULL, 10),
+(110, 13, 'monto', 'text', 'Monto', 0, 1, 1, 1, 1, 1, NULL, 11),
+(111, 13, 'tipo_id', 'text', 'Tipo Id', 0, 1, 1, 1, 1, 1, NULL, 12),
+(112, 13, 'estado', 'text', 'Estado', 0, 1, 1, 1, 1, 1, NULL, 13),
+(113, 13, 'concluido', 'text', 'Concluido', 0, 1, 1, 1, 1, 1, NULL, 14),
+(114, 14, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(115, 14, 'fecha_pago', 'text', 'Fecha Pago', 0, 1, 1, 1, 1, 1, NULL, 2),
+(116, 14, 'mensualidad_id', 'text', 'Mensualidad Id', 0, 1, 1, 1, 1, 1, NULL, 3),
+(117, 14, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 4),
+(118, 14, 'monto', 'text', 'Monto', 0, 1, 1, 1, 1, 1, NULL, 5),
+(119, 14, 'observaciones', 'text', 'Observaciones', 0, 1, 1, 1, 1, 1, NULL, 6),
+(120, 14, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 7),
+(121, 14, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 8),
+(122, 14, 'recibo_id', 'text', 'Recibo Id', 0, 1, 1, 1, 1, 1, NULL, 9),
+(123, 15, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(124, 15, 'nombre', 'text', 'Nombre', 0, 1, 1, 1, 1, 1, NULL, 2),
+(125, 15, 'nivel_id', 'text', 'Nivel Id', 0, 1, 1, 1, 1, 1, NULL, 3),
+(126, 15, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 4),
+(127, 15, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 5),
+(128, 15, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 6),
+(129, 15, 'descripcion', 'text', 'Descripcion', 0, 1, 1, 1, 1, 1, NULL, 7),
+(130, 16, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(131, 16, 'codigo', 'text', 'Codigo', 0, 1, 1, 1, 1, 1, NULL, 2),
+(132, 16, 'nombre', 'text', 'Nombre', 0, 1, 1, 1, 1, 1, NULL, 3),
+(133, 16, 'periodo_id', 'text', 'Periodo Id', 0, 1, 1, 1, 1, 1, NULL, 4),
+(134, 16, 'horas_practicas', 'text', 'Horas Practicas', 0, 1, 1, 1, 1, 1, NULL, 5),
+(135, 16, 'horas_teoricas', 'text', 'Horas Teoricas', 0, 1, 1, 1, 1, 1, NULL, 6),
+(136, 16, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 7),
+(137, 16, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 8),
+(138, 16, 'descripcion', 'text', 'Descripcion', 0, 1, 1, 1, 1, 1, NULL, 9),
+(139, 16, 'horas_total', 'text', 'Horas Total', 0, 1, 1, 1, 1, 1, NULL, 10),
+(140, 17, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(141, 17, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 2),
+(142, 17, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 3),
+(143, 17, 'nombre', 'text', 'Nombre', 0, 1, 1, 1, 1, 1, NULL, 4),
+(144, 17, 'hora_inicio', 'text', 'Hora Inicio', 0, 1, 1, 1, 1, 1, NULL, 5),
+(145, 17, 'hora_fin', 'text', 'Hora Fin', 0, 1, 1, 1, 1, 1, NULL, 6),
+(146, 17, 'lunes', 'text', 'Lunes', 0, 1, 1, 1, 1, 1, NULL, 7),
+(147, 17, 'martes', 'text', 'Martes', 0, 1, 1, 1, 1, 1, NULL, 8),
+(148, 17, 'miercoles', 'text', 'Miercoles', 0, 1, 1, 1, 1, 1, NULL, 9),
+(149, 17, 'jueves', 'text', 'Jueves', 0, 1, 1, 1, 1, 1, NULL, 10),
+(150, 17, 'viernes', 'text', 'Viernes', 0, 1, 1, 1, 1, 1, NULL, 11),
+(151, 17, 'sabado', 'text', 'Sabado', 0, 1, 1, 1, 1, 1, NULL, 12),
+(152, 17, 'habilitado', 'text', 'Habilitado', 0, 1, 1, 1, 1, 1, NULL, 13),
+(153, 18, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(154, 18, 'nombres', 'text', 'Nombres', 0, 1, 1, 1, 1, 1, NULL, 2),
+(155, 18, 'apellidos', 'text', 'Apellidos', 0, 1, 1, 1, 1, 1, NULL, 3),
+(156, 18, 'profesion_id', 'text', 'Profesion Id', 0, 1, 1, 1, 1, 1, NULL, 4),
+(157, 18, 'avatar', 'text', 'Avatar', 0, 1, 1, 1, 1, 1, NULL, 5),
+(158, 18, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 6),
+(159, 18, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 7);
 
 -- --------------------------------------------------------
 
@@ -218,7 +314,16 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', '', '', 1, 0, NULL, '2018-07-20 18:48:26', '2018-07-20 18:48:26'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2018-07-20 18:48:26', '2018-07-20 18:48:26'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, '', '', 1, 0, NULL, '2018-07-20 18:48:26', '2018-07-20 18:48:26'),
-(8, 'permissions', 'permissions', 'Permission', 'Permissions', NULL, 'App\\Permission', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-20 19:36:37', '2018-07-20 19:36:37');
+(8, 'permissions', 'permissions', 'Permission', 'Permissions', NULL, 'App\\Permission', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-20 19:36:37', '2018-07-20 19:36:37'),
+(10, 'estudiantes', 'estudiantes', 'Estudiante', 'Estudiantes', 'voyager-group', 'App\\Estudiante', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 07:43:12', '2018-07-21 07:44:10'),
+(11, 'mensualidades', 'mensualidades', 'Mensualidade', 'Mensualidades', 'voyager-logbook', 'App\\Mensualidade', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 07:52:51', '2018-07-21 07:52:51'),
+(12, 'recibos', 'recibos', 'Recibo', 'Recibos', 'voyager-receipt', 'App\\Recibo', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 07:57:12', '2018-07-21 07:58:05'),
+(13, 'inscripciones', 'inscripciones', 'Inscripcione', 'Inscripciones', 'voyager-puzzle', 'App\\Inscripcione', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 08:02:08', '2018-07-21 08:02:08'),
+(14, 'pagos', 'pagos', 'Pago', 'Pagos', 'voyager-credit-cards', 'App\\Pago', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 08:04:52', '2018-07-21 08:04:52'),
+(15, 'carreras', 'carreras', 'Carrera', 'Carreras', 'voyager-study', 'App\\Carrera', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 08:11:51', '2018-07-21 08:11:51'),
+(16, 'asignaturas', 'asignaturas', 'Asignatura', 'Asignaturas', 'voyager-wallet', 'App\\Asignatura', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 08:13:50', '2018-07-21 08:13:50'),
+(17, 'horarios', 'horarios', 'Horario', 'Horarios', 'voyager-calendar', 'App\\Horario', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 08:15:31', '2018-07-21 08:15:31'),
+(18, 'educadores', 'educadores', 'Educadore', 'Educadores', 'voyager-github-icon', 'App\\Educadore', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 08:22:02', '2018-07-21 08:22:02');
 
 -- --------------------------------------------------------
 
@@ -532,14 +637,14 @@ CREATE TABLE `menu_items` (
 
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
 (1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 1, '2018-07-20 18:48:28', '2018-07-20 18:48:28', 'voyager.dashboard', NULL),
-(2, 1, 'Media', '', '_self', 'voyager-images', NULL, 5, 3, '2018-07-20 18:48:29', '2018-07-20 18:53:46', 'voyager.media.index', NULL),
+(2, 1, 'Media', '', '_self', 'voyager-images', NULL, 5, 1, '2018-07-20 18:48:29', '2018-07-21 08:22:22', 'voyager.media.index', NULL),
 (5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 6, '2018-07-20 18:48:29', '2018-07-20 19:22:06', NULL, NULL),
-(6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 4, '2018-07-20 18:48:29', '2018-07-20 18:53:46', 'voyager.menus.index', NULL),
-(7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 5, '2018-07-20 18:48:29', '2018-07-20 18:53:46', 'voyager.database.index', NULL),
-(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 6, '2018-07-20 18:48:29', '2018-07-20 18:53:46', 'voyager.compass.index', NULL),
-(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 7, '2018-07-20 18:48:29', '2018-07-20 18:53:46', 'voyager.bread.index', NULL),
-(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, 5, 9, '2018-07-20 18:48:29', '2018-07-20 18:53:46', 'voyager.settings.index', NULL),
-(14, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 8, '2018-07-20 18:48:45', '2018-07-20 18:53:46', 'voyager.hooks', NULL),
+(6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 2, '2018-07-20 18:48:29', '2018-07-21 08:22:22', 'voyager.menus.index', NULL),
+(7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 3, '2018-07-20 18:48:29', '2018-07-21 08:22:22', 'voyager.database.index', NULL),
+(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 4, '2018-07-20 18:48:29', '2018-07-21 08:22:22', 'voyager.compass.index', NULL),
+(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 5, '2018-07-20 18:48:29', '2018-07-21 08:22:22', 'voyager.bread.index', NULL),
+(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, 5, 7, '2018-07-20 18:48:29', '2018-07-21 08:22:22', 'voyager.settings.index', NULL),
+(14, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 6, '2018-07-20 18:48:45', '2018-07-21 08:22:22', 'voyager.hooks', NULL),
 (15, 1, 'Seguridad', '/admin/security', '_self', 'voyager-key', '#000000', NULL, 5, '2018-07-20 19:02:16', '2018-07-20 19:22:06', NULL, ''),
 (16, 1, 'Inscripciónes', '/admin/inscription', '_self', 'voyager-pen', '#000000', NULL, 2, '2018-07-20 19:16:20', '2018-07-20 19:16:28', NULL, ''),
 (17, 1, 'Programación', '/admin/programming', '_self', 'voyager-params', '#000000', NULL, 3, '2018-07-20 19:21:02', '2018-07-20 19:22:32', NULL, ''),
@@ -749,7 +854,52 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (43, 'read_permissions', 'permissions', '2018-07-20 19:36:37', '2018-07-20 19:36:37'),
 (44, 'edit_permissions', 'permissions', '2018-07-20 19:36:37', '2018-07-20 19:36:37'),
 (45, 'add_permissions', 'permissions', '2018-07-20 19:36:37', '2018-07-20 19:36:37'),
-(46, 'delete_permissions', 'permissions', '2018-07-20 19:36:37', '2018-07-20 19:36:37');
+(46, 'delete_permissions', 'permissions', '2018-07-20 19:36:37', '2018-07-20 19:36:37'),
+(47, 'browse_estudiantes', 'estudiantes', '2018-07-21 07:43:12', '2018-07-21 07:43:12'),
+(48, 'read_estudiantes', 'estudiantes', '2018-07-21 07:43:12', '2018-07-21 07:43:12'),
+(49, 'edit_estudiantes', 'estudiantes', '2018-07-21 07:43:12', '2018-07-21 07:43:12'),
+(50, 'add_estudiantes', 'estudiantes', '2018-07-21 07:43:12', '2018-07-21 07:43:12'),
+(51, 'delete_estudiantes', 'estudiantes', '2018-07-21 07:43:12', '2018-07-21 07:43:12'),
+(52, 'browse_mensualidades', 'mensualidades', '2018-07-21 07:52:51', '2018-07-21 07:52:51'),
+(53, 'read_mensualidades', 'mensualidades', '2018-07-21 07:52:51', '2018-07-21 07:52:51'),
+(54, 'edit_mensualidades', 'mensualidades', '2018-07-21 07:52:51', '2018-07-21 07:52:51'),
+(55, 'add_mensualidades', 'mensualidades', '2018-07-21 07:52:51', '2018-07-21 07:52:51'),
+(56, 'delete_mensualidades', 'mensualidades', '2018-07-21 07:52:51', '2018-07-21 07:52:51'),
+(57, 'browse_recibos', 'recibos', '2018-07-21 07:57:12', '2018-07-21 07:57:12'),
+(58, 'read_recibos', 'recibos', '2018-07-21 07:57:12', '2018-07-21 07:57:12'),
+(59, 'edit_recibos', 'recibos', '2018-07-21 07:57:12', '2018-07-21 07:57:12'),
+(60, 'add_recibos', 'recibos', '2018-07-21 07:57:12', '2018-07-21 07:57:12'),
+(61, 'delete_recibos', 'recibos', '2018-07-21 07:57:12', '2018-07-21 07:57:12'),
+(62, 'browse_inscripciones', 'inscripciones', '2018-07-21 08:02:09', '2018-07-21 08:02:09'),
+(63, 'read_inscripciones', 'inscripciones', '2018-07-21 08:02:09', '2018-07-21 08:02:09'),
+(64, 'edit_inscripciones', 'inscripciones', '2018-07-21 08:02:09', '2018-07-21 08:02:09'),
+(65, 'add_inscripciones', 'inscripciones', '2018-07-21 08:02:09', '2018-07-21 08:02:09'),
+(66, 'delete_inscripciones', 'inscripciones', '2018-07-21 08:02:09', '2018-07-21 08:02:09'),
+(67, 'browse_pagos', 'pagos', '2018-07-21 08:04:52', '2018-07-21 08:04:52'),
+(68, 'read_pagos', 'pagos', '2018-07-21 08:04:52', '2018-07-21 08:04:52'),
+(69, 'edit_pagos', 'pagos', '2018-07-21 08:04:52', '2018-07-21 08:04:52'),
+(70, 'add_pagos', 'pagos', '2018-07-21 08:04:52', '2018-07-21 08:04:52'),
+(71, 'delete_pagos', 'pagos', '2018-07-21 08:04:52', '2018-07-21 08:04:52'),
+(72, 'browse_carreras', 'carreras', '2018-07-21 08:11:51', '2018-07-21 08:11:51'),
+(73, 'read_carreras', 'carreras', '2018-07-21 08:11:51', '2018-07-21 08:11:51'),
+(74, 'edit_carreras', 'carreras', '2018-07-21 08:11:51', '2018-07-21 08:11:51'),
+(75, 'add_carreras', 'carreras', '2018-07-21 08:11:51', '2018-07-21 08:11:51'),
+(76, 'delete_carreras', 'carreras', '2018-07-21 08:11:51', '2018-07-21 08:11:51'),
+(77, 'browse_asignaturas', 'asignaturas', '2018-07-21 08:13:50', '2018-07-21 08:13:50'),
+(78, 'read_asignaturas', 'asignaturas', '2018-07-21 08:13:50', '2018-07-21 08:13:50'),
+(79, 'edit_asignaturas', 'asignaturas', '2018-07-21 08:13:50', '2018-07-21 08:13:50'),
+(80, 'add_asignaturas', 'asignaturas', '2018-07-21 08:13:50', '2018-07-21 08:13:50'),
+(81, 'delete_asignaturas', 'asignaturas', '2018-07-21 08:13:50', '2018-07-21 08:13:50'),
+(82, 'browse_horarios', 'horarios', '2018-07-21 08:15:31', '2018-07-21 08:15:31'),
+(83, 'read_horarios', 'horarios', '2018-07-21 08:15:31', '2018-07-21 08:15:31'),
+(84, 'edit_horarios', 'horarios', '2018-07-21 08:15:31', '2018-07-21 08:15:31'),
+(85, 'add_horarios', 'horarios', '2018-07-21 08:15:31', '2018-07-21 08:15:31'),
+(86, 'delete_horarios', 'horarios', '2018-07-21 08:15:31', '2018-07-21 08:15:31'),
+(87, 'browse_educadores', 'educadores', '2018-07-21 08:22:02', '2018-07-21 08:22:02'),
+(88, 'read_educadores', 'educadores', '2018-07-21 08:22:02', '2018-07-21 08:22:02'),
+(89, 'edit_educadores', 'educadores', '2018-07-21 08:22:02', '2018-07-21 08:22:02'),
+(90, 'add_educadores', 'educadores', '2018-07-21 08:22:02', '2018-07-21 08:22:02'),
+(91, 'delete_educadores', 'educadores', '2018-07-21 08:22:02', '2018-07-21 08:22:02');
 
 -- --------------------------------------------------------
 
@@ -796,7 +946,52 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (43, 1),
 (44, 1),
 (45, 1),
-(46, 1);
+(46, 1),
+(47, 1),
+(48, 1),
+(49, 1),
+(50, 1),
+(51, 1),
+(52, 1),
+(53, 1),
+(54, 1),
+(55, 1),
+(56, 1),
+(57, 1),
+(58, 1),
+(59, 1),
+(60, 1),
+(61, 1),
+(62, 1),
+(63, 1),
+(64, 1),
+(65, 1),
+(66, 1),
+(67, 1),
+(68, 1),
+(69, 1),
+(70, 1),
+(71, 1),
+(72, 1),
+(73, 1),
+(74, 1),
+(75, 1),
+(76, 1),
+(77, 1),
+(78, 1),
+(79, 1),
+(80, 1),
+(81, 1),
+(82, 1),
+(83, 1),
+(84, 1),
+(85, 1),
+(86, 1),
+(87, 1),
+(88, 1),
+(89, 1),
+(90, 1),
+(91, 1);
 
 -- --------------------------------------------------------
 
@@ -1361,13 +1556,13 @@ ALTER TABLE `carreras_asignaturas`
 -- AUTO_INCREMENT de la tabla `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
 
 --
 -- AUTO_INCREMENT de la tabla `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `documentos`
@@ -1433,7 +1628,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT de la tabla `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -1469,7 +1664,7 @@ ALTER TABLE `periodos`
 -- AUTO_INCREMENT de la tabla `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT de la tabla `profesiones`
@@ -1566,7 +1761,6 @@ ALTER TABLE `users`
 ALTER TABLE `user_roles`
   ADD CONSTRAINT `user_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `user_roles_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

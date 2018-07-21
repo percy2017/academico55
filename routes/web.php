@@ -22,7 +22,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/security','SecurityController@index');
     Route::get('/programming','ProgrammingController@index');
     Route::get('/notes','NotesController@index');
-    Route::get('/inscripction','InscriptionController@index');
+    Route::get('/inscription','InscriptionController@index');
 
     
 });
