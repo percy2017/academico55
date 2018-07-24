@@ -17,7 +17,7 @@
                 <i class='voyager-pen'></i>
                 <!-- <h4>Usuarios</h4> -->
                 <!--    <p></p> -->
-                <a href="{{ route('voyager.users.index') }}" class="btn btn-primary btn-lg">CONTROL</a>
+                <a href="{{ url('/admin/inscription/control') }}" class="btn btn-primary btn-lg">CONTROL</a>
             </div>
         </div>
     </div>

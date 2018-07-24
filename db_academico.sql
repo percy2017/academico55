@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 21-07-2018 a las 05:27:00
--- Versión del servidor: 5.6.38
--- Versión de PHP: 7.2.1
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 24-07-2018 a las 03:12:10
+-- Versión del servidor: 10.1.26-MariaDB
+-- Versión de PHP: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -412,7 +414,8 @@ INSERT INTO `estudiantes` (`id`, `nombres`, `apellidos_paterno`, `apellidos_mate
 (6, 'LUISA.E', 'SUAREZ', 'O', 1, '234234 SANTA CRUZ', '234234234', NULL, 'V.CORINA/4TA.CALLE/JARAJORECHI', '2018-06-08 20:45:15', '2018-06-08 20:45:15', 6, 2, NULL, '234234234'),
 (7, 'ENRRIQUE', 'FRANCO', 'DIEZ', 1, '345345 BENI', '345345', NULL, 'URB. NUEVA TDD CALLE N? 13 E/CALLE-3 Y AV.II', '2018-06-08 22:09:27', '2018-06-08 22:09:27', 1, 1, NULL, '3453454'),
 (8, 'CARMELO', 'LOPEZ', 'MORENO', 1, '4564533 COCHABAMBA', '5544656456', NULL, 'URB. LA MOPERITA PAS.PUENTE A 2 CUAD.IZQ. A 2 1/2 CUAD,#', '2018-06-11 12:45:06', '2018-06-11 12:45:06', 1, 1, NULL, '456456556'),
-(9, 'rolando', 'espinoza', 'lopez', 1, '4434534 BENI', '34534534', NULL, 'Calle Matadero #989', '2018-07-17 21:58:57', '2018-07-17 21:58:57', 6, 2, NULL, '34534534');
+(9, 'rolando', 'espinoza', 'lopez', 1, '4434534 BENI', '34534534', NULL, 'Calle Matadero #989', '2018-07-17 21:58:57', '2018-07-17 21:58:57', 6, 2, NULL, '34534534'),
+(10, 'roman', 'velarde', 'semo', 1, '234 BENI', '23423', NULL, 'calle', '2018-07-23 21:04:08', '2018-07-23 21:04:08', 1, 1, NULL, '234234');
 
 -- --------------------------------------------------------
 
@@ -463,16 +466,22 @@ CREATE TABLE `imagenes_insc` (
   `ruta` text COLLATE utf8_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `descripcion` text COLLATE utf8_unicode_ci
+  `descripcion` text COLLATE utf8_unicode_ci,
+  `estado` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `imagenes_insc`
 --
 
-INSERT INTO `imagenes_insc` (`id`, `fecha`, `user_id`, `insc_id`, `ruta`, `created_at`, `updated_at`, `descripcion`) VALUES
-(1, '2018-06-11 10:44:42', 1, 8, 'pete-bellis-379246-unsplash.jpg', '2018-06-11 14:44:42', '2018-06-11 14:44:42', 'Imagen de estudiante'),
-(2, '2018-07-17 18:01:06', 6, 9, 'website.png', '2018-07-17 22:01:06', '2018-07-17 22:01:06', 'Certificado Notas Nivel Secuandaria');
+INSERT INTO `imagenes_insc` (`id`, `fecha`, `user_id`, `insc_id`, `ruta`, `created_at`, `updated_at`, `descripcion`, `estado`) VALUES
+(10, '2018-07-23 21:02:41', 1, 10, 'descarga (1).jpg', '2018-07-24 01:02:41', '2018-07-24 01:02:41', 'asdf', 0),
+(11, '2018-07-23 21:03:27', 1, 10, 'descarga.jpg', '2018-07-24 01:03:27', '2018-07-24 01:03:27', 'asdf', 0),
+(12, '2018-07-23 21:03:37', 1, 10, 'post4-small.jpg', '2018-07-24 01:03:37', '2018-07-24 01:03:37', 'asdf', 0),
+(13, '2018-07-23 21:06:31', 1, 10, 'datacenter.jpg', '2018-07-24 01:06:31', '2018-07-24 01:06:31', 'asdf', 0),
+(14, '2018-07-23 21:07:16', 1, 10, 'screen-shot-20170605-at-7.36.22-am-1200x800.jpg', '2018-07-24 01:07:16', '2018-07-24 01:07:16', 'asdfasdf', 0),
+(15, '2018-07-23 21:07:54', 1, 10, 'website.png', '2018-07-24 01:07:54', '2018-07-24 01:07:54', 'asdfasdf', 1),
+(16, '2018-07-23 21:11:18', 1, 10, 'descarga (2).jpg', '2018-07-24 01:11:18', '2018-07-24 01:11:18', 'ASD', 1);
 
 -- --------------------------------------------------------
 
@@ -534,7 +543,8 @@ INSERT INTO `inscripciones` (`id`, `fecha_insc`, `user_id`, `carrera_id`, `creat
 (6, '2018-06-08 16:45:15', 6, 1, '2018-06-08 20:45:15', '2018-06-08 20:45:15', '2018-02-05', 6, 2, 'Pago por Concepto de Mensualidad #1', 150, 2, 0x31, 0x30),
 (7, '2018-06-08 18:09:27', 1, 1, '2018-06-08 22:09:27', '2018-06-08 22:09:27', '2018-02-05', 7, 2, 'Pago por Concepto de Mensualidad #1', 250, 1, 0x31, 0x30),
 (8, '2018-06-11 08:45:07', 1, 6, '2018-06-11 12:45:07', '2018-06-11 14:48:08', '2018-02-05', 8, 2, 'Pago por Concepto de Mensualidad #1', 150, 1, 0x31, 0x31),
-(9, '2018-07-17 17:58:57', 6, 4, '2018-07-17 21:58:57', '2018-07-17 21:58:57', '2018-07-23', 9, 3, 'Pago por Concepto de Mensualidad #1', 250, 1, 0x31, 0x30);
+(9, '2018-07-17 17:58:57', 6, 4, '2018-07-17 21:58:57', '2018-07-17 21:58:57', '2018-07-23', 9, 3, 'Pago por Concepto de Mensualidad #1', 250, 1, 0x31, 0x30),
+(10, '2018-07-23 17:04:09', 1, 1, '2018-07-23 21:04:09', '2018-07-23 21:04:09', '2018-07-23', 10, 1, 'pago por concepto de mensualidad #', 200, 1, 0x31, 0x30);
 
 -- --------------------------------------------------------
 
@@ -587,7 +597,11 @@ INSERT INTO `mensualidades` (`id`, `num_mens`, `monto`, `created_at`, `updated_a
 (6, 1, 150, '2018-06-08 20:45:15', '2018-06-08 20:45:15', '2018-02-05', '2018-03-05', 0x31, 'Pago por Concepto de Mensualidad #1', 6, '2018-06-08', 6, 6),
 (7, 1, 250, '2018-06-08 22:09:28', '2018-06-08 22:09:28', '2018-02-05', '2018-03-05', 0x31, 'Pago por Concepto de Mensualidad #1', 1, '2018-06-08', 7, 7),
 (8, 1, 150, '2018-06-11 12:45:07', '2018-06-11 12:45:07', '2018-02-05', '2018-03-05', 0x31, 'Pago por Concepto de Mensualidad #1', 1, '2018-06-11', 8, 8),
-(9, 1, 250, '2018-07-17 21:58:57', '2018-07-17 21:58:57', '2018-07-23', '2018-08-23', 0x31, 'Pago por Concepto de Mensualidad #1', 6, '2018-07-17', 9, 9);
+(9, 1, 250, '2018-07-17 21:58:57', '2018-07-17 21:58:57', '2018-07-23', '2018-08-23', 0x31, 'Pago por Concepto de Mensualidad #1', 6, '2018-07-17', 9, 9),
+(10, 2, 150, '2018-07-23 19:20:22', '2018-07-23 20:04:02', '2018-07-23', '2018-08-23', 0x31, 'Pago final', 1, '2018-07-23', 9, 12),
+(11, 3, 100, '2018-07-23 19:51:53', '2018-07-23 19:51:53', '2018-08-23', '2018-09-23', 0x30, 'pago por concepto de mensualidad #1', 1, '2018-07-23', 9, 11),
+(12, 1, 200, '2018-07-23 21:04:09', '2018-07-23 21:04:09', '2018-07-23', '2018-08-23', 0x31, 'pago por concepto de mensualidad #', 1, '2018-07-23', 10, 13),
+(13, 2, 200, '2018-07-23 21:13:17', '2018-07-23 21:13:17', '2018-08-23', '2018-09-23', 0x31, 'pago por concepto de mensualidad #2', 1, '2018-07-23', 10, 14);
 
 -- --------------------------------------------------------
 
@@ -769,7 +783,10 @@ CREATE TABLE `pagos` (
 
 INSERT INTO `pagos` (`id`, `fecha_pago`, `mensualidad_id`, `user_id`, `monto`, `observaciones`, `created_at`, `updated_at`, `recibo_id`) VALUES
 (1, '2018-06-08 12:19:06', 2, 1, 100, 'Pago por Concepto de Mensualidad #1', '2018-06-08 16:19:06', '2018-06-08 16:19:06', 2),
-(2, '2018-06-08 16:19:05', 4, 6, 100, 'Pago por Concepto de Mensualidad #1', '2018-06-08 20:19:05', '2018-06-08 20:19:05', 4);
+(2, '2018-06-08 16:19:05', 4, 6, 100, 'Pago por Concepto de Mensualidad #1', '2018-06-08 20:19:05', '2018-06-08 20:19:05', 4),
+(3, '2018-07-23 15:20:22', 10, 1, 100, 'Pago parcial por la primera mensualidad.', '2018-07-23 19:20:22', '2018-07-23 19:20:22', 10),
+(4, '2018-07-23 15:51:53', 11, 1, 100, 'pago por concepto de mensualidad #1', '2018-07-23 19:51:53', '2018-07-23 19:51:53', 11),
+(5, '2018-07-23 16:04:02', 10, 1, 50, 'Pago final', '2018-07-23 20:04:02', '2018-07-23 20:04:02', 12);
 
 -- --------------------------------------------------------
 
@@ -1107,7 +1124,12 @@ INSERT INTO `recibos` (`id`, `numero`, `concepto`, `updated_at`, `monto_numeral`
 (6, '000006/2018', 'Pago por Concepto de Mensualidad #1', '2018-06-08 20:45:15', 150, '150,00 (Ciento cincuenta  00/100 Bolivianos)', '2018-06-08 16:45:15', 6, '2018-06-08 20:45:15', 6),
 (7, '000007/2018', 'Pago por Concepto de Mensualidad #1', '2018-06-08 22:09:28', 250, '250,00 (Doscientos cincuenta  00/100 Bolivianos)', '2018-06-08 18:09:28', 1, '2018-06-08 22:09:28', 7),
 (8, '000008/2018', 'Pago por Concepto de Mensualidad #1', '2018-06-11 12:45:07', 150, '150,00 (Ciento cincuenta  00/100 Bolivianos)', '2018-06-11 08:45:07', 1, '2018-06-11 12:45:07', 8),
-(9, '000009/2018', 'Pago por Concepto de Mensualidad #1', '2018-07-17 21:58:57', 250, '250,00 (Doscientos cincuenta  00/100 Bolivianos)', '2018-07-17 17:58:57', 6, '2018-07-17 21:58:57', 9);
+(9, '000009/2018', 'Pago por Concepto de Mensualidad #1', '2018-07-17 21:58:57', 250, '250,00 (Doscientos cincuenta  00/100 Bolivianos)', '2018-07-17 17:58:57', 6, '2018-07-17 21:58:57', 9),
+(10, '000010/2018', 'Pago parcial por la primera mensualidad.', '2018-07-23 19:20:22', 100, '100,00 (Cien  00/100 Bolivianos)', '2018-07-23 15:20:22', 1, '2018-07-23 19:20:22', 9),
+(11, '000011/2018', 'pago por concepto de mensualidad #1', '2018-07-23 19:51:53', 100, '100,00 (Cien  00/100 Bolivianos)', '2018-07-23 15:51:53', 1, '2018-07-23 19:51:53', 9),
+(12, '000012/2018', 'Pago final', '2018-07-23 20:04:02', 50, '50,00 (Cincuenta  00/100 Bolivianos)', '2018-07-23 16:04:02', 1, '2018-07-23 20:04:02', 9),
+(13, '000013/2018', 'pago por concepto de mensualidad #', '2018-07-23 21:04:09', 200, '200,00 (Doscientos  00/100 Bolivianos)', '2018-07-23 17:04:09', 1, '2018-07-23 21:04:09', 10),
+(14, '000014/2018', 'pago por concepto de mensualidad #2', '2018-07-23 21:13:17', 200, '200,00 (Doscientos  00/100 Bolivianos)', '2018-07-23 17:13:17', 1, '2018-07-23 21:13:17', 10);
 
 -- --------------------------------------------------------
 
@@ -1162,7 +1184,8 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (7, 'admin.description', 'Admin Description', 'Sistema Académico v10', '', 'text', 2, 'Admin'),
 (8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
 (9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
-(10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin');
+(10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin'),
+(11, 'admin.concepto_recibo1', 'concepto_recibo1', 'pago por concepto de mensualidad #', NULL, 'text', 6, 'Admin');
 
 -- --------------------------------------------------------
 
@@ -1580,7 +1603,7 @@ ALTER TABLE `educadores`
 -- AUTO_INCREMENT de la tabla `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `horarios`
@@ -1592,7 +1615,7 @@ ALTER TABLE `horarios`
 -- AUTO_INCREMENT de la tabla `imagenes_insc`
 --
 ALTER TABLE `imagenes_insc`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `imagenes_prog`
@@ -1604,7 +1627,7 @@ ALTER TABLE `imagenes_prog`
 -- AUTO_INCREMENT de la tabla `inscripciones`
 --
 ALTER TABLE `inscripciones`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `insc_estados`
@@ -1616,7 +1639,7 @@ ALTER TABLE `insc_estados`
 -- AUTO_INCREMENT de la tabla `mensualidades`
 --
 ALTER TABLE `mensualidades`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `menus`
@@ -1628,7 +1651,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT de la tabla `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -1652,7 +1675,7 @@ ALTER TABLE `notas`
 -- AUTO_INCREMENT de la tabla `pagos`
 --
 ALTER TABLE `pagos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `periodos`
@@ -1688,7 +1711,7 @@ ALTER TABLE `programacion_estudiante`
 -- AUTO_INCREMENT de la tabla `recibos`
 --
 ALTER TABLE `recibos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -1700,7 +1723,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `sexualidades`
@@ -1761,6 +1784,7 @@ ALTER TABLE `users`
 ALTER TABLE `user_roles`
   ADD CONSTRAINT `user_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `user_roles_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

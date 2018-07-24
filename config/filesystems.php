@@ -54,6 +54,10 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
+        'imagenes_isc' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/inscription_imagenes'),
+        ],
 
         's3' => [
             'driver' => 's3',
