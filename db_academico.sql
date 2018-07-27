@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-07-2018 a las 03:12:10
+-- Tiempo de generación: 27-07-2018 a las 20:44:02
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.9
 
@@ -189,100 +189,155 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (63, 10, 'nombres', 'text', 'Nombres', 1, 1, 1, 1, 1, 1, NULL, 2),
 (64, 10, 'apellidos_paterno', 'text', 'Apellidos Paterno', 1, 1, 1, 1, 1, 1, NULL, 3),
 (65, 10, 'apellidos_materno', 'text', 'Apellidos Materno', 1, 1, 1, 1, 1, 1, NULL, 4),
-(66, 10, 'documento_id', 'text', 'Documento Id', 1, 1, 1, 1, 1, 1, NULL, 5),
+(66, 10, 'documento_id', 'text', 'Documento Id', 1, 0, 1, 1, 1, 1, NULL, 5),
 (67, 10, 'num_documento', 'text', 'Num Documento', 1, 1, 1, 1, 1, 1, NULL, 6),
 (68, 10, 'telefono', 'text', 'Telefono', 0, 1, 1, 1, 1, 1, NULL, 7),
-(69, 10, 'avatar', 'text', 'Avatar', 0, 1, 1, 1, 1, 1, NULL, 8),
-(70, 10, 'direccion', 'text', 'Direccion', 0, 1, 1, 1, 1, 1, NULL, 9),
-(71, 10, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 10),
+(69, 10, 'avatar', 'image', 'Avatar', 0, 1, 1, 1, 1, 1, NULL, 8),
+(70, 10, 'direccion', 'text_area', 'Direccion', 0, 0, 1, 1, 1, 1, NULL, 9),
+(71, 10, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 10),
 (72, 10, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 11),
-(73, 10, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 12),
-(74, 10, 'sexualidad_id', 'text', 'Sexualidad Id', 0, 1, 1, 1, 1, 1, NULL, 13),
-(75, 10, 'habilitado', 'text', 'Habilitado', 0, 1, 1, 1, 1, 1, NULL, 14),
-(76, 10, 'telefono2', 'text', 'Telefono2', 0, 1, 1, 1, 1, 1, NULL, 15),
+(73, 10, 'user_id', 'text', 'User Id', 0, 0, 0, 0, 0, 0, NULL, 12),
+(74, 10, 'sexualidad_id', 'text', 'Sexualidad Id', 0, 0, 0, 0, 0, 0, NULL, 13),
+(75, 10, 'habilitado', 'checkbox', 'Habilitado', 0, 0, 0, 0, 0, 0, NULL, 14),
+(76, 10, 'telefono2', 'text', 'Telefono2', 0, 0, 1, 1, 1, 1, NULL, 15),
 (77, 11, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
 (78, 11, 'num_mens', 'text', 'Num Mens', 0, 1, 1, 1, 1, 1, NULL, 2),
 (79, 11, 'monto', 'text', 'Monto', 0, 1, 1, 1, 1, 1, NULL, 3),
-(80, 11, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 4),
+(80, 11, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 4),
 (81, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 5),
 (82, 11, 'fecha_inicio', 'text', 'Fecha Inicio', 0, 1, 1, 1, 1, 1, NULL, 6),
 (83, 11, 'fecha_final', 'text', 'Fecha Final', 0, 1, 1, 1, 1, 1, NULL, 7),
-(84, 11, 'estado', 'text', 'Estado', 0, 1, 1, 1, 1, 1, NULL, 8),
-(85, 11, 'observaciones', 'text', 'Observaciones', 0, 1, 1, 1, 1, 1, NULL, 9),
-(86, 11, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 10),
+(84, 11, 'estado', 'checkbox', 'Estado', 0, 0, 0, 0, 0, 0, NULL, 8),
+(85, 11, 'observaciones', 'text_area', 'Observaciones', 0, 0, 1, 1, 1, 1, NULL, 9),
+(86, 11, 'user_id', 'text', 'User Id', 0, 0, 0, 0, 0, 0, NULL, 10),
 (87, 11, 'fecha_pago', 'text', 'Fecha Pago', 0, 1, 1, 1, 1, 1, NULL, 11),
-(88, 11, 'inscripcion_id', 'text', 'Inscripcion Id', 0, 1, 1, 1, 1, 1, NULL, 12),
-(89, 11, 'recibo_id', 'text', 'Recibo Id', 0, 1, 1, 1, 1, 1, NULL, 13),
+(88, 11, 'inscripcion_id', 'text', 'Inscripcion Id', 0, 0, 0, 0, 0, 0, NULL, 12),
+(89, 11, 'recibo_id', 'text', 'Recibo Id', 0, 0, 1, 1, 1, 1, NULL, 13),
 (90, 12, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
-(91, 12, 'numero', 'text', 'Numero', 0, 1, 1, 1, 1, 1, NULL, 2),
-(92, 12, 'concepto', 'text', 'Concepto', 0, 1, 1, 1, 1, 1, NULL, 3),
+(91, 12, 'numero', 'text', 'Numero', 0, 1, 1, 0, 0, 0, NULL, 2),
+(92, 12, 'concepto', 'text_area', 'Concepto', 0, 1, 1, 1, 1, 1, NULL, 3),
 (93, 12, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
 (94, 12, 'monto_numeral', 'text', 'Monto Numeral', 0, 1, 1, 1, 1, 1, NULL, 5),
-(95, 12, 'monto_literal', 'text', 'Monto Literal', 0, 1, 1, 1, 1, 1, NULL, 6),
+(95, 12, 'monto_literal', 'text', 'Monto Literal', 0, 0, 1, 1, 0, 0, NULL, 6),
 (96, 12, 'fecha', 'text', 'Fecha', 0, 1, 1, 1, 1, 1, NULL, 7),
-(97, 12, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 8),
-(98, 12, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 9),
-(99, 12, 'estudiante_id', 'text', 'Estudiante Id', 0, 1, 1, 1, 1, 1, NULL, 10),
+(97, 12, 'user_id', 'text', 'User Id', 0, 0, 0, 0, 0, 0, NULL, 8),
+(98, 12, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 9),
+(99, 12, 'estudiante_id', 'text', 'Estudiante Id', 0, 0, 0, 0, 0, 0, NULL, 10),
 (100, 13, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
 (101, 13, 'fecha_insc', 'text', 'Fecha Insc', 0, 1, 1, 1, 1, 1, NULL, 2),
-(102, 13, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 3),
-(103, 13, 'carrera_id', 'text', 'Carrera Id', 0, 1, 1, 1, 1, 1, NULL, 4),
-(104, 13, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 5),
+(102, 13, 'user_id', 'text', 'User Id', 0, 0, 0, 0, 0, 0, NULL, 3),
+(103, 13, 'carrera_id', 'text', 'Carrera Id', 0, 0, 1, 1, 1, 1, NULL, 4),
+(104, 13, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 5),
 (105, 13, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 6),
 (106, 13, 'fecha_inicio', 'text', 'Fecha Inicio', 0, 1, 1, 1, 1, 1, NULL, 7),
-(107, 13, 'estudiante_id', 'text', 'Estudiante Id', 0, 1, 1, 1, 1, 1, NULL, 8),
-(108, 13, 'horario_id', 'text', 'Horario Id', 0, 1, 1, 1, 1, 1, NULL, 9),
-(109, 13, 'observaciones', 'text', 'Observaciones', 0, 1, 1, 1, 1, 1, NULL, 10),
+(107, 13, 'estudiante_id', 'text', 'Estudiante Id', 0, 0, 1, 1, 1, 1, NULL, 8),
+(108, 13, 'horario_id', 'text', 'Horario Id', 0, 0, 1, 1, 1, 1, NULL, 9),
+(109, 13, 'observaciones', 'text_area', 'Observaciones', 0, 0, 1, 1, 1, 1, NULL, 10),
 (110, 13, 'monto', 'text', 'Monto', 0, 1, 1, 1, 1, 1, NULL, 11),
-(111, 13, 'tipo_id', 'text', 'Tipo Id', 0, 1, 1, 1, 1, 1, NULL, 12),
-(112, 13, 'estado', 'text', 'Estado', 0, 1, 1, 1, 1, 1, NULL, 13),
-(113, 13, 'concluido', 'text', 'Concluido', 0, 1, 1, 1, 1, 1, NULL, 14),
+(111, 13, 'tipo_id', 'text', 'Tipo Id', 0, 0, 1, 1, 1, 1, NULL, 12),
+(112, 13, 'estado', 'checkbox', 'Estado', 0, 0, 0, 0, 0, 0, NULL, 13),
+(113, 13, 'concluido', 'checkbox', 'Concluido', 0, 0, 1, 1, 1, 1, NULL, 14),
 (114, 14, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
 (115, 14, 'fecha_pago', 'text', 'Fecha Pago', 0, 1, 1, 1, 1, 1, NULL, 2),
-(116, 14, 'mensualidad_id', 'text', 'Mensualidad Id', 0, 1, 1, 1, 1, 1, NULL, 3),
-(117, 14, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 4),
+(116, 14, 'mensualidad_id', 'text', 'Mensualidad Id', 0, 0, 1, 1, 1, 1, NULL, 3),
+(117, 14, 'user_id', 'text', 'User Id', 0, 0, 0, 0, 0, 0, NULL, 4),
 (118, 14, 'monto', 'text', 'Monto', 0, 1, 1, 1, 1, 1, NULL, 5),
-(119, 14, 'observaciones', 'text', 'Observaciones', 0, 1, 1, 1, 1, 1, NULL, 6),
-(120, 14, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 7),
+(119, 14, 'observaciones', 'text_area', 'Observaciones', 0, 0, 1, 1, 1, 1, NULL, 6),
+(120, 14, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 7),
 (121, 14, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 8),
-(122, 14, 'recibo_id', 'text', 'Recibo Id', 0, 1, 1, 1, 1, 1, NULL, 9),
+(122, 14, 'recibo_id', 'text', 'Recibo Id', 0, 0, 1, 1, 1, 1, NULL, 9),
 (123, 15, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
 (124, 15, 'nombre', 'text', 'Nombre', 0, 1, 1, 1, 1, 1, NULL, 2),
-(125, 15, 'nivel_id', 'text', 'Nivel Id', 0, 1, 1, 1, 1, 1, NULL, 3),
-(126, 15, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 4),
-(127, 15, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 5),
+(125, 15, 'nivel_id', 'text', 'Nivel Id', 0, 0, 1, 1, 1, 1, NULL, 3),
+(126, 15, 'user_id', 'text', 'User Id', 0, 0, 0, 0, 0, 0, NULL, 4),
+(127, 15, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 5),
 (128, 15, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 6),
 (129, 15, 'descripcion', 'text', 'Descripcion', 0, 1, 1, 1, 1, 1, NULL, 7),
 (130, 16, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
 (131, 16, 'codigo', 'text', 'Codigo', 0, 1, 1, 1, 1, 1, NULL, 2),
 (132, 16, 'nombre', 'text', 'Nombre', 0, 1, 1, 1, 1, 1, NULL, 3),
-(133, 16, 'periodo_id', 'text', 'Periodo Id', 0, 1, 1, 1, 1, 1, NULL, 4),
+(133, 16, 'periodo_id', 'text', 'Periodo Id', 0, 0, 1, 1, 1, 1, NULL, 4),
 (134, 16, 'horas_practicas', 'text', 'Horas Practicas', 0, 1, 1, 1, 1, 1, NULL, 5),
 (135, 16, 'horas_teoricas', 'text', 'Horas Teoricas', 0, 1, 1, 1, 1, 1, NULL, 6),
-(136, 16, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 7),
+(136, 16, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 7),
 (137, 16, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 8),
-(138, 16, 'descripcion', 'text', 'Descripcion', 0, 1, 1, 1, 1, 1, NULL, 9),
+(138, 16, 'descripcion', 'text_area', 'Descripcion', 0, 0, 1, 1, 1, 1, NULL, 9),
 (139, 16, 'horas_total', 'text', 'Horas Total', 0, 1, 1, 1, 1, 1, NULL, 10),
 (140, 17, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
-(141, 17, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 2),
+(141, 17, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 2),
 (142, 17, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 3),
 (143, 17, 'nombre', 'text', 'Nombre', 0, 1, 1, 1, 1, 1, NULL, 4),
 (144, 17, 'hora_inicio', 'text', 'Hora Inicio', 0, 1, 1, 1, 1, 1, NULL, 5),
 (145, 17, 'hora_fin', 'text', 'Hora Fin', 0, 1, 1, 1, 1, 1, NULL, 6),
-(146, 17, 'lunes', 'text', 'Lunes', 0, 1, 1, 1, 1, 1, NULL, 7),
-(147, 17, 'martes', 'text', 'Martes', 0, 1, 1, 1, 1, 1, NULL, 8),
-(148, 17, 'miercoles', 'text', 'Miercoles', 0, 1, 1, 1, 1, 1, NULL, 9),
-(149, 17, 'jueves', 'text', 'Jueves', 0, 1, 1, 1, 1, 1, NULL, 10),
-(150, 17, 'viernes', 'text', 'Viernes', 0, 1, 1, 1, 1, 1, NULL, 11),
-(151, 17, 'sabado', 'text', 'Sabado', 0, 1, 1, 1, 1, 1, NULL, 12),
-(152, 17, 'habilitado', 'text', 'Habilitado', 0, 1, 1, 1, 1, 1, NULL, 13),
+(146, 17, 'lunes', 'checkbox', 'Lunes', 0, 0, 1, 1, 1, 1, NULL, 7),
+(147, 17, 'martes', 'checkbox', 'Martes', 0, 0, 1, 1, 1, 1, NULL, 8),
+(148, 17, 'miercoles', 'checkbox', 'Miercoles', 0, 0, 1, 1, 1, 1, NULL, 9),
+(149, 17, 'jueves', 'checkbox', 'Jueves', 0, 0, 1, 1, 1, 1, NULL, 10),
+(150, 17, 'viernes', 'checkbox', 'Viernes', 0, 0, 1, 1, 1, 1, NULL, 11),
+(151, 17, 'sabado', 'checkbox', 'Sabado', 0, 0, 1, 1, 1, 1, NULL, 12),
+(152, 17, 'habilitado', 'checkbox', 'Habilitado', 0, 0, 1, 1, 1, 1, NULL, 13),
 (153, 18, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
 (154, 18, 'nombres', 'text', 'Nombres', 0, 1, 1, 1, 1, 1, NULL, 2),
 (155, 18, 'apellidos', 'text', 'Apellidos', 0, 1, 1, 1, 1, 1, NULL, 3),
-(156, 18, 'profesion_id', 'text', 'Profesion Id', 0, 1, 1, 1, 1, 1, NULL, 4),
-(157, 18, 'avatar', 'text', 'Avatar', 0, 1, 1, 1, 1, 1, NULL, 5),
-(158, 18, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 6),
-(159, 18, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 7);
+(156, 18, 'profesion_id', 'text', 'Profesion Id', 0, 0, 1, 1, 1, 1, NULL, 4),
+(157, 18, 'avatar', 'image', 'Avatar', 0, 1, 1, 1, 1, 1, NULL, 5),
+(158, 18, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 6),
+(159, 18, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 7),
+(160, 19, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(161, 19, 'fecha', 'text', 'Fecha', 0, 1, 1, 1, 1, 1, NULL, 2),
+(162, 19, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, NULL, 3),
+(163, 19, 'asignatura_id', 'text', 'Asignatura Id', 0, 1, 1, 1, 1, 1, NULL, 4),
+(164, 19, 'observacion', 'text', 'Observacion', 0, 1, 1, 1, 1, 1, NULL, 5),
+(165, 19, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 6),
+(166, 19, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 7),
+(167, 19, 'educador_id', 'text', 'Educador Id', 0, 1, 1, 1, 1, 1, NULL, 8),
+(168, 19, 'estado', 'text', 'Estado', 0, 1, 1, 1, 1, 1, NULL, 9),
+(169, 19, 'horario_id', 'text', 'Horario Id', 0, 1, 1, 1, 1, 1, NULL, 10),
+(170, 19, 'nota_estado', 'text', 'Nota Estado', 0, 1, 1, 1, 1, 1, NULL, 11),
+(171, 10, 'estudiante_belongsto_sexualidade_relationship', 'relationship', 'sexualidades', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Sexualidade\",\"table\":\"sexualidades\",\"type\":\"belongsTo\",\"column\":\"sexualidad_id\",\"key\":\"id\",\"label\":\"nombre\",\"pivot_table\":\"asignaturas\",\"pivot\":\"0\",\"taggable\":\"0\"}', 16),
+(172, 20, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(173, 20, 'nombre', 'text', 'Nombre', 0, 1, 1, 1, 1, 1, NULL, 2),
+(174, 20, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 3),
+(175, 20, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
+(176, 10, 'estudiante_belongsto_documento_relationship', 'relationship', 'documentos', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Documento\",\"table\":\"documentos\",\"type\":\"belongsTo\",\"column\":\"documento_id\",\"key\":\"id\",\"label\":\"nombre\",\"pivot_table\":\"asignaturas\",\"pivot\":\"0\",\"taggable\":\"0\"}', 17),
+(177, 11, 'mensualidade_belongsto_recibo_relationship', 'relationship', 'recibos', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Recibo\",\"table\":\"recibos\",\"type\":\"belongsTo\",\"column\":\"recibo_id\",\"key\":\"id\",\"label\":\"numero\",\"pivot_table\":\"asignaturas\",\"pivot\":\"0\",\"taggable\":\"0\"}', 14),
+(178, 13, 'inscripcione_belongsto_estudiante_relationship', 'relationship', 'estudiantes', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Estudiante\",\"table\":\"estudiantes\",\"type\":\"belongsTo\",\"column\":\"estudiante_id\",\"key\":\"id\",\"label\":\"num_documento\",\"pivot_table\":\"asignaturas\",\"pivot\":\"0\",\"taggable\":\"0\"}', 15),
+(179, 13, 'inscripcione_belongsto_horario_relationship', 'relationship', 'horarios', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Horario\",\"table\":\"horarios\",\"type\":\"belongsTo\",\"column\":\"horario_id\",\"key\":\"id\",\"label\":\"nombre\",\"pivot_table\":\"asignaturas\",\"pivot\":\"0\",\"taggable\":\"0\"}', 16),
+(180, 13, 'inscripcione_belongsto_carrera_relationship', 'relationship', 'carreras', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Carrera\",\"table\":\"carreras\",\"type\":\"belongsTo\",\"column\":\"carrera_id\",\"key\":\"id\",\"label\":\"nombre\",\"pivot_table\":\"asignaturas\",\"pivot\":\"0\",\"taggable\":\"0\"}', 17),
+(181, 14, 'pago_belongsto_mensualidade_relationship', 'relationship', 'mensualidades', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Mensualidade\",\"table\":\"mensualidades\",\"type\":\"belongsTo\",\"column\":\"mensualidad_id\",\"key\":\"id\",\"label\":\"id\",\"pivot_table\":\"asignaturas\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10),
+(182, 14, 'pago_belongsto_recibo_relationship', 'relationship', 'recibos', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Recibo\",\"table\":\"recibos\",\"type\":\"belongsTo\",\"column\":\"recibo_id\",\"key\":\"id\",\"label\":\"numero\",\"pivot_table\":\"asignaturas\",\"pivot\":\"0\",\"taggable\":\"0\"}', 11),
+(183, 22, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(184, 22, 'nombre', 'text', 'Nombre', 1, 1, 1, 1, 1, 1, NULL, 2),
+(185, 22, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 3),
+(186, 22, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
+(187, 23, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(188, 23, 'programacion_id', 'text', 'Programacion Id', 0, 1, 1, 1, 1, 1, NULL, 2),
+(189, 23, 'nota', 'text', 'Nota', 0, 1, 1, 1, 1, 1, NULL, 3),
+(190, 23, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 4),
+(191, 23, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 5),
+(192, 23, 'insc_id', 'text', 'Insc Id', 0, 0, 0, 0, 0, 0, NULL, 6),
+(193, 24, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(194, 24, 'nombre', 'text', 'Nombre', 0, 1, 1, 1, 1, 1, NULL, 2),
+(195, 24, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 3),
+(196, 24, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
+(197, 25, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(198, 25, 'nombre', 'text', 'Nombre', 0, 1, 1, 1, 1, 1, NULL, 2),
+(199, 25, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 3),
+(200, 25, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
+(201, 26, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(202, 26, 'nombre', 'text', 'Nombre', 1, 1, 1, 1, 1, 1, NULL, 2),
+(203, 26, 'descripcion', 'text_area', 'Descripcion', 0, 0, 1, 1, 1, 1, NULL, 3),
+(204, 26, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 4),
+(205, 26, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 5),
+(206, 27, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(207, 27, 'nombre', 'text', 'Nombre', 0, 1, 1, 1, 1, 1, NULL, 2),
+(208, 27, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 3),
+(209, 27, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
+(210, 15, 'carrera_belongsto_nivele_relationship', 'relationship', 'niveles', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Nivele\",\"table\":\"niveles\",\"type\":\"belongsTo\",\"column\":\"nivel_id\",\"key\":\"id\",\"label\":\"nombre\",\"pivot_table\":\"asignaturas\",\"pivot\":\"0\",\"taggable\":\"0\"}', 8),
+(211, 16, 'asignatura_belongsto_periodo_relationship', 'relationship', 'periodos', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Periodo\",\"table\":\"periodos\",\"type\":\"belongsTo\",\"column\":\"periodo_id\",\"key\":\"id\",\"label\":\"nombre\",\"pivot_table\":\"asignaturas\",\"pivot\":\"0\",\"taggable\":\"0\"}', 11),
+(212, 15, 'carrera_belongstomany_asignatura_relationship', 'relationship', 'asignaturas', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Asignatura\",\"table\":\"asignaturas\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"nombre\",\"pivot_table\":\"carreras_asignaturas\",\"pivot\":\"1\",\"taggable\":null}', 9),
+(213, 18, 'educadore_belongsto_profesione_relationship', 'relationship', 'profesiones', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Profesione\",\"table\":\"profesiones\",\"type\":\"belongsTo\",\"column\":\"profesion_id\",\"key\":\"id\",\"label\":\"nombre\",\"pivot_table\":\"asignaturas\",\"pivot\":\"0\",\"taggable\":\"0\"}', 8),
+(214, 13, 'inscripcione_belongsto_tipo_relationship', 'relationship', 'tipos', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Tipo\",\"table\":\"tipos\",\"type\":\"belongsTo\",\"column\":\"tipo_id\",\"key\":\"id\",\"label\":\"nombre\",\"pivot_table\":\"asignaturas\",\"pivot\":\"0\",\"taggable\":\"0\"}', 18);
 
 -- --------------------------------------------------------
 
@@ -325,7 +380,15 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (15, 'carreras', 'carreras', 'Carrera', 'Carreras', 'voyager-study', 'App\\Carrera', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 08:11:51', '2018-07-21 08:11:51'),
 (16, 'asignaturas', 'asignaturas', 'Asignatura', 'Asignaturas', 'voyager-wallet', 'App\\Asignatura', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 08:13:50', '2018-07-21 08:13:50'),
 (17, 'horarios', 'horarios', 'Horario', 'Horarios', 'voyager-calendar', 'App\\Horario', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 08:15:31', '2018-07-21 08:15:31'),
-(18, 'educadores', 'educadores', 'Educadore', 'Educadores', 'voyager-github-icon', 'App\\Educadore', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 08:22:02', '2018-07-21 08:22:02');
+(18, 'educadores', 'educadores', 'Educadore', 'Educadores', 'voyager-github-icon', 'App\\Educadore', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-21 08:22:02', '2018-07-21 08:22:02'),
+(19, 'programaciones', 'programaciones', 'Programacione', 'Programaciones', NULL, 'App\\Programacione', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-24 12:15:00', '2018-07-24 12:15:00'),
+(20, 'documentos', 'documentos', 'Documento', 'Documentos', NULL, 'App\\Documento', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-24 20:55:29', '2018-07-24 20:55:29'),
+(22, 'niveles', 'niveles', 'Nivele', 'Niveles', NULL, 'App\\Nivele', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-24 21:42:55', '2018-07-24 21:42:55'),
+(23, 'notas', 'notas', 'Nota', 'Notas', NULL, 'App\\Nota', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-24 21:43:55', '2018-07-24 21:43:55'),
+(24, 'periodos', 'periodos', 'Periodo', 'Periodos', NULL, 'App\\Periodo', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-24 21:45:18', '2018-07-24 21:45:18'),
+(25, 'profesiones', 'profesiones', 'Profesione', 'Profesiones', NULL, 'App\\Profesione', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-24 21:46:10', '2018-07-24 21:46:10'),
+(26, 'sexualidades', 'sexualidades', 'Sexualidade', 'Sexualidades', NULL, 'App\\Sexualidade', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-24 21:46:59', '2018-07-24 21:46:59'),
+(27, 'tipos', 'tipos', 'Tipo', 'Tipos', NULL, 'App\\Tipo', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-24 21:47:38', '2018-07-24 21:47:38');
 
 -- --------------------------------------------------------
 
@@ -375,7 +438,7 @@ INSERT INTO `educadores` (`id`, `nombres`, `apellidos`, `profesion_id`, `avatar`
 (3, 'Alvaro', 'Guzman Sanabria', 1, 'educadores\\May2018\\YdTutrst1N7rOHE2sNiW.jpg', '2018-05-24 01:16:34', '2018-05-24 01:16:34'),
 (4, 'Alejandra', 'Caballero Lopez', 3, 'educadores\\May2018\\rIBZPISPFg2Wt80i95d9.jpg', '2018-05-28 05:40:19', '2018-05-28 05:40:19'),
 (5, 'Penelope', 'Landivar Cuellar', 3, 'educadores\\May2018\\vu3tg2UOobL70JDmWc5V.jpg', '2018-05-28 05:42:55', '2018-05-28 05:42:55'),
-(6, 'Wilfredo', 'Santos Calles', 1, 'educadores\\May2018\\X3Ru2GaqJoiJMnHfUDmy.jpg', '2018-05-28 19:30:02', '2018-05-28 19:30:02');
+(6, 'Wilfredo', 'Santos Calles', 1, 'educadores\\July2018\\b2tXRNnJMrrOr3jZy7Z4.jpg', '2018-05-28 19:30:02', '2018-07-27 13:27:58');
 
 -- --------------------------------------------------------
 
@@ -397,7 +460,7 @@ CREATE TABLE `estudiantes` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   `sexualidad_id` int(11) DEFAULT NULL,
-  `habilitado` binary(1) DEFAULT NULL,
+  `habilitado` tinyint(1) DEFAULT '1',
   `telefono2` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -406,16 +469,18 @@ CREATE TABLE `estudiantes` (
 --
 
 INSERT INTO `estudiantes` (`id`, `nombres`, `apellidos_paterno`, `apellidos_materno`, `documento_id`, `num_documento`, `telefono`, `avatar`, `direccion`, `created_at`, `updated_at`, `user_id`, `sexualidad_id`, `habilitado`, `telefono2`) VALUES
-(1, 'LEANDRO', 'GUARACHI', 'SAICO', 1, '4546456 BENI', '44565656', NULL, 'C/ IPURUPURO/COCHARCAS/J. MARAZA', '2018-06-08 13:56:08', '2018-06-08 13:56:08', 1, 1, NULL, '456456456'),
-(2, 'DANNY', 'CABRERA', 'ALARCON', 1, '456456456 BENI', '345654654', NULL, 'C/TTE. LUIS CESPEDES ESQ. C/HNOS. RIOJA APONTE,#', '2018-06-08 16:19:05', '2018-06-08 16:19:05', 1, 1, NULL, '456456453'),
-(3, 'HUGO', 'VELEZ', 'OSINAGA', 1, '345345 BENI', '343455', NULL, 'CALLE GIL FREDO CORTEZ 3ER. LOTE', '2018-06-08 20:08:58', '2018-06-08 20:08:58', 6, 1, NULL, '345345'),
-(4, 'MERY', 'BARBA', 'CHAVEZ', 1, '34534545 BENI', '345345345', NULL, 'URB. V. MILDRED/MZ-G  C./ LAS PALMAS FINAL ANTES CANAL DESAGUE,#', '2018-06-08 20:19:05', '2018-06-08 20:19:05', 6, 1, NULL, '3453453'),
-(5, 'IVAN', 'ZAMBRANA', 'FERNANDEZ', 1, '234234 BENI', '234234', NULL, 'URB. TAHUICHI/MANZ. M/LOTE 13', '2018-06-08 20:42:48', '2018-06-08 20:42:48', 6, 1, NULL, '234234'),
-(6, 'LUISA.E', 'SUAREZ', 'O', 1, '234234 SANTA CRUZ', '234234234', NULL, 'V.CORINA/4TA.CALLE/JARAJORECHI', '2018-06-08 20:45:15', '2018-06-08 20:45:15', 6, 2, NULL, '234234234'),
-(7, 'ENRRIQUE', 'FRANCO', 'DIEZ', 1, '345345 BENI', '345345', NULL, 'URB. NUEVA TDD CALLE N? 13 E/CALLE-3 Y AV.II', '2018-06-08 22:09:27', '2018-06-08 22:09:27', 1, 1, NULL, '3453454'),
-(8, 'CARMELO', 'LOPEZ', 'MORENO', 1, '4564533 COCHABAMBA', '5544656456', NULL, 'URB. LA MOPERITA PAS.PUENTE A 2 CUAD.IZQ. A 2 1/2 CUAD,#', '2018-06-11 12:45:06', '2018-06-11 12:45:06', 1, 1, NULL, '456456556'),
-(9, 'rolando', 'espinoza', 'lopez', 1, '4434534 BENI', '34534534', NULL, 'Calle Matadero #989', '2018-07-17 21:58:57', '2018-07-17 21:58:57', 6, 2, NULL, '34534534'),
-(10, 'roman', 'velarde', 'semo', 1, '234 BENI', '23423', NULL, 'calle', '2018-07-23 21:04:08', '2018-07-23 21:04:08', 1, 1, NULL, '234234');
+(11, 'marco', 'flores', 'perez', 1, '234234 BENI', '234234', NULL, 'Calle', '2018-07-24 02:32:49', '2018-07-24 02:32:49', 1, 1, 1, '234234'),
+(12, 'maria', 'cruz', 'lopez', 1, '234234 BENI', '234234', 'estudiantes\\July2018\\Ay4nTu79yYdxVzD6TW7s.jpg', 'Calle', '2018-07-24 02:58:00', '2018-07-24 21:14:33', 1, 1, 1, '234'),
+(13, 'luis miguel', 'correa', 'soliz', 1, '34543 BENI', '345345', 'estudiantes\\July2018\\9nsTOorpg86WY9o3d6Rz.jpg', 'calle', '2018-07-24 03:52:00', '2018-07-24 21:11:59', 1, 1, 1, '34534534'),
+(14, 'rolando', 'suarez', 'rodrigues', 1, '345345 BENI', '345345', 'estudiantes\\July2018\\2s1FW3qqJxMXK0PhpFnn.jpg', 'calle', '2018-07-24 03:55:00', '2018-07-24 20:59:46', 1, 1, 1, '345345'),
+(15, 'cesar', 'lopez', 'suarez', 1, '234234 BENI', '234234', NULL, 'Calle', '2018-07-25 13:06:28', '2018-07-25 13:06:28', 1, 1, 1, '234234'),
+(16, 'Margarita', 'Viruez', 'soliz', 1, '324323430 BENI', '233334', NULL, 'Calle', '2018-07-25 13:16:42', '2018-07-25 13:16:42', 1, 1, 1, '323234'),
+(17, 'Aldo', 'pepenoli', 'binto', 1, '2342332 BENI', '234234', NULL, 'Calle', '2018-07-25 18:59:49', '2018-07-25 18:59:49', 1, 1, 1, NULL),
+(18, 'Dania', 'Sanches', 'molina', 1, '345345 BENI', '345345', NULL, 'Calle', '2018-07-25 20:33:55', '2018-07-25 20:33:55', 1, 1, 1, '3345345'),
+(19, 'Tatiana', 'Cuellar', 'Mendez', 1, '234234 BENI', '234234', NULL, 'Calle', '2018-07-25 20:38:27', '2018-07-25 20:38:27', 1, 2, 1, NULL),
+(20, 'jary', 'barvery', 'jordan', 1, '234234 BENI', '234234234', NULL, 'calle', '2018-07-25 21:03:00', '2018-07-27 13:58:32', 1, 1, 1, NULL),
+(21, 'Kery', 'Teran', 'gonzales', 1, '234234 BENI', '234234', NULL, 'Calle', '2018-07-27 14:09:44', '2018-07-27 14:09:44', 1, 1, 1, NULL),
+(22, 'Yesica', 'Paniagua', 'cordoba', 1, '234234 BENI', '234234', NULL, 'Calle', '2018-07-27 14:53:33', '2018-07-27 14:53:33', 1, 1, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -470,19 +535,6 @@ CREATE TABLE `imagenes_insc` (
   `estado` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Volcado de datos para la tabla `imagenes_insc`
---
-
-INSERT INTO `imagenes_insc` (`id`, `fecha`, `user_id`, `insc_id`, `ruta`, `created_at`, `updated_at`, `descripcion`, `estado`) VALUES
-(10, '2018-07-23 21:02:41', 1, 10, 'descarga (1).jpg', '2018-07-24 01:02:41', '2018-07-24 01:02:41', 'asdf', 0),
-(11, '2018-07-23 21:03:27', 1, 10, 'descarga.jpg', '2018-07-24 01:03:27', '2018-07-24 01:03:27', 'asdf', 0),
-(12, '2018-07-23 21:03:37', 1, 10, 'post4-small.jpg', '2018-07-24 01:03:37', '2018-07-24 01:03:37', 'asdf', 0),
-(13, '2018-07-23 21:06:31', 1, 10, 'datacenter.jpg', '2018-07-24 01:06:31', '2018-07-24 01:06:31', 'asdf', 0),
-(14, '2018-07-23 21:07:16', 1, 10, 'screen-shot-20170605-at-7.36.22-am-1200x800.jpg', '2018-07-24 01:07:16', '2018-07-24 01:07:16', 'asdfasdf', 0),
-(15, '2018-07-23 21:07:54', 1, 10, 'website.png', '2018-07-24 01:07:54', '2018-07-24 01:07:54', 'asdfasdf', 1),
-(16, '2018-07-23 21:11:18', 1, 10, 'descarga (2).jpg', '2018-07-24 01:11:18', '2018-07-24 01:11:18', 'ASD', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -499,13 +551,6 @@ CREATE TABLE `imagenes_prog` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `imagenes_prog`
---
-
-INSERT INTO `imagenes_prog` (`id`, `fecha`, `user_id`, `prog_id`, `ruta`, `descripcion`, `created_at`, `updated_at`) VALUES
-(4, '2018-06-11', 1, 2, 'nota.jpg', 'Escaneado de notas 1', '2018-06-11 14:34:14', '2018-06-11 14:34:14');
 
 -- --------------------------------------------------------
 
@@ -535,16 +580,18 @@ CREATE TABLE `inscripciones` (
 --
 
 INSERT INTO `inscripciones` (`id`, `fecha_insc`, `user_id`, `carrera_id`, `created_at`, `updated_at`, `fecha_inicio`, `estudiante_id`, `horario_id`, `observaciones`, `monto`, `tipo_id`, `estado`, `concluido`) VALUES
-(1, '2018-06-08 09:56:08', 1, 9, '2018-06-08 13:56:08', '2018-06-08 21:54:55', '2018-01-08', 1, 1, 'Pago por Concepto de Mensualidad #1', 100, 1, 0x31, 0x31),
-(2, '2018-06-08 12:19:05', 1, 9, '2018-06-08 16:19:05', '2018-06-08 16:19:05', '2018-01-08', 2, 1, 'Pago por Concepto de Mensualidad #1', 100, 1, 0x31, 0x30),
-(3, '2018-06-08 00:00:00', 6, 9, '2018-06-08 20:08:58', '2018-06-08 20:15:41', '2018-01-08', 3, 1, 'Pago por Concepto de Mensualidad #1', 100, 1, 0x31, 0x30),
-(4, '2018-06-08 16:19:05', 6, 9, '2018-06-08 20:19:05', '2018-06-08 20:19:05', '2018-01-08', 4, 1, 'Pago por Concepto de Mensualidad #1', 100, 1, 0x31, 0x30),
-(5, '2018-06-08 16:42:48', 6, 1, '2018-06-08 20:42:48', '2018-06-08 20:42:48', '2018-02-05', 5, 2, 'Pago por Concepto de Mensualidad #1', 250, 1, 0x31, 0x30),
-(6, '2018-06-08 16:45:15', 6, 1, '2018-06-08 20:45:15', '2018-06-08 20:45:15', '2018-02-05', 6, 2, 'Pago por Concepto de Mensualidad #1', 150, 2, 0x31, 0x30),
-(7, '2018-06-08 18:09:27', 1, 1, '2018-06-08 22:09:27', '2018-06-08 22:09:27', '2018-02-05', 7, 2, 'Pago por Concepto de Mensualidad #1', 250, 1, 0x31, 0x30),
-(8, '2018-06-11 08:45:07', 1, 6, '2018-06-11 12:45:07', '2018-06-11 14:48:08', '2018-02-05', 8, 2, 'Pago por Concepto de Mensualidad #1', 150, 1, 0x31, 0x31),
-(9, '2018-07-17 17:58:57', 6, 4, '2018-07-17 21:58:57', '2018-07-17 21:58:57', '2018-07-23', 9, 3, 'Pago por Concepto de Mensualidad #1', 250, 1, 0x31, 0x30),
-(10, '2018-07-23 17:04:09', 1, 1, '2018-07-23 21:04:09', '2018-07-23 21:04:09', '2018-07-23', 10, 1, 'pago por concepto de mensualidad #', 200, 1, 0x31, 0x30);
+(11, '2018-07-23 22:32:49', 1, 1, '2018-07-24 02:32:49', '2018-07-24 02:32:49', '2018-07-23', 11, 1, 'pago parcial por concepto de mensualidad #1', 250, 1, 0x31, 0x30),
+(12, '2018-07-23 22:58:02', 1, 1, '2018-07-24 02:58:02', '2018-07-24 03:51:40', '2018-07-23', 12, 1, 'pago parcial por concepto de mensualidad #1', 250, 1, 0x31, 0x30),
+(13, '2018-07-23 23:52:41', 1, 1, '2018-07-24 03:52:41', '2018-07-24 03:52:41', '2018-07-23', 13, 1, 'pago por concepto de mensualidad #', 200, 1, 0x31, 0x30),
+(14, '2018-07-23 23:55:13', 1, 1, '2018-07-24 03:55:13', '2018-07-24 03:55:13', '2018-07-23', 14, 1, 'pago por concepto de mensualidad #', 200, 1, 0x31, 0x30),
+(15, '2018-07-25 09:06:28', 1, 1, '2018-07-25 13:06:28', '2018-07-25 13:14:09', '2018-07-30', 15, 1, 'pago por concepto de mensualidad #1', 150, 1, 0x31, 0x30),
+(16, '2018-07-25 09:16:42', 1, 1, '2018-07-25 13:16:42', '2018-07-25 13:16:42', '2018-07-25', 16, 1, 'pago por concepto de mensualidad #1', 250, 1, 0x31, 0x30),
+(17, '2018-07-25 14:59:50', 1, 2, '2018-07-25 18:59:50', '2018-07-25 18:59:50', '2018-07-30', 17, 1, 'pago por concepto de mensualidad #1', 200, 1, 0x31, 0x30),
+(18, '2018-07-25 16:33:55', 1, 2, '2018-07-25 20:33:55', '2018-07-25 20:33:55', '2018-07-30', 18, 5, 'pago por concepto de mensualidad #1', 100, 2, 0x31, 0x30),
+(19, '2018-07-25 16:38:27', 1, 2, '2018-07-25 20:38:27', '2018-07-25 20:38:27', '2018-07-25', 19, 1, 'pago por concepto de mensualidad #1', 200, 1, 0x31, 0x30),
+(20, '2018-07-25 17:03:19', 1, 6, '2018-07-25 21:03:19', '2018-07-25 21:03:19', '2018-07-30', 20, 1, 'pago completo por concepto del curso.', 500, 1, 0x31, 0x30),
+(21, '2018-07-27 10:09:44', 1, 3, '2018-07-27 14:09:44', '2018-07-27 14:47:19', '2018-07-30', 21, 3, 'pago por concepto de mensualidad #1', 150, 2, 0x31, 0x30),
+(22, '2018-07-27 10:53:33', 1, 3, '2018-07-27 14:53:33', '2018-07-27 14:53:33', '2018-07-30', 22, 4, 'pago parcial por concepto de mensualidad #1', 100, 2, 0x31, 0x30);
 
 -- --------------------------------------------------------
 
@@ -589,19 +636,24 @@ CREATE TABLE `mensualidades` (
 --
 
 INSERT INTO `mensualidades` (`id`, `num_mens`, `monto`, `created_at`, `updated_at`, `fecha_inicio`, `fecha_final`, `estado`, `observaciones`, `user_id`, `fecha_pago`, `inscripcion_id`, `recibo_id`) VALUES
-(1, 1, 100, '2018-06-08 13:56:08', '2018-06-08 13:56:08', '2018-01-08', '2018-02-08', 0x31, 'Pago por Concepto de Mensualidad #1', 1, '2018-06-08', 1, 1),
-(2, 1, 100, '2018-06-08 16:19:05', '2018-06-08 16:19:05', '2018-01-08', '2018-02-08', 0x30, 'Pago por Concepto de Mensualidad #1', 1, '2018-06-08', 2, 2),
-(3, 1, 100, '2018-06-08 20:08:58', '2018-06-08 20:08:58', '2018-01-08', '2018-02-08', 0x31, 'Pago por Concepto de Mensualidad #1', 6, '2018-06-08', 3, 3),
-(4, 1, 100, '2018-06-08 20:19:05', '2018-06-08 20:19:05', '2018-01-08', '2018-02-08', 0x30, 'Pago por Concepto de Mensualidad #1', 6, '2018-06-08', 4, 4),
-(5, 1, 250, '2018-06-08 20:42:48', '2018-06-08 20:42:48', '2018-02-05', '2018-03-05', 0x31, 'Pago por Concepto de Mensualidad #1', 6, '2018-06-08', 5, 5),
-(6, 1, 150, '2018-06-08 20:45:15', '2018-06-08 20:45:15', '2018-02-05', '2018-03-05', 0x31, 'Pago por Concepto de Mensualidad #1', 6, '2018-06-08', 6, 6),
-(7, 1, 250, '2018-06-08 22:09:28', '2018-06-08 22:09:28', '2018-02-05', '2018-03-05', 0x31, 'Pago por Concepto de Mensualidad #1', 1, '2018-06-08', 7, 7),
-(8, 1, 150, '2018-06-11 12:45:07', '2018-06-11 12:45:07', '2018-02-05', '2018-03-05', 0x31, 'Pago por Concepto de Mensualidad #1', 1, '2018-06-11', 8, 8),
-(9, 1, 250, '2018-07-17 21:58:57', '2018-07-17 21:58:57', '2018-07-23', '2018-08-23', 0x31, 'Pago por Concepto de Mensualidad #1', 6, '2018-07-17', 9, 9),
-(10, 2, 150, '2018-07-23 19:20:22', '2018-07-23 20:04:02', '2018-07-23', '2018-08-23', 0x31, 'Pago final', 1, '2018-07-23', 9, 12),
-(11, 3, 100, '2018-07-23 19:51:53', '2018-07-23 19:51:53', '2018-08-23', '2018-09-23', 0x30, 'pago por concepto de mensualidad #1', 1, '2018-07-23', 9, 11),
-(12, 1, 200, '2018-07-23 21:04:09', '2018-07-23 21:04:09', '2018-07-23', '2018-08-23', 0x31, 'pago por concepto de mensualidad #', 1, '2018-07-23', 10, 13),
-(13, 2, 200, '2018-07-23 21:13:17', '2018-07-23 21:13:17', '2018-08-23', '2018-09-23', 0x31, 'pago por concepto de mensualidad #2', 1, '2018-07-23', 10, 14);
+(14, 1, 200, '2018-07-24 02:32:49', '2018-07-24 02:32:49', '2018-07-23', '2018-08-23', 0x30, 'pago parcial por concepto de mensualidad #1', 1, '2018-07-23', 11, 15),
+(15, 1, 100, '2018-07-24 02:58:02', '2018-07-24 02:58:02', '2018-07-23', '2018-08-23', 0x31, 'pago parcial por concepto de mensualidad #1', 1, '2018-07-23', 12, 16),
+(16, 1, 200, '2018-07-24 03:52:42', '2018-07-24 03:52:42', '2018-07-23', '2018-08-23', 0x31, 'pago por concepto de mensualidad #', 1, '2018-07-23', 13, 17),
+(17, 1, 200, '2018-07-24 03:55:13', '2018-07-24 03:55:13', '2018-07-23', '2018-08-23', 0x31, 'pago por concepto de mensualidad #', 1, '2018-07-23', 14, 18),
+(18, 1, 150, '2018-07-25 13:06:29', '2018-07-25 13:06:29', '2018-07-30', '2018-08-30', 0x31, 'pago por concepto de mensualidad #1', 1, '2018-07-25', 15, 19),
+(19, 1, 250, '2018-07-25 13:16:42', '2018-07-25 13:16:42', '2018-07-25', '2018-08-25', 0x31, 'pago por concepto de mensualidad #1', 1, '2018-07-25', 16, 20),
+(20, 1, 200, '2018-07-25 18:59:50', '2018-07-25 18:59:50', '2018-07-30', '2018-08-30', 0x31, 'pago por concepto de mensualidad #1', 1, '2018-07-25', 17, 21),
+(21, 2, 250, '2018-07-25 20:23:32', '2018-07-25 20:23:32', '2018-08-23', '2018-09-23', 0x31, 'pago por concepto de mensualidad #2', 1, '2018-07-25', 11, 22),
+(22, 2, 250, '2018-07-25 20:25:38', '2018-07-25 20:25:38', '2018-08-23', '2018-09-23', 0x31, 'pago por concepto de mensualidad #2', 1, '2018-07-25', 12, 23),
+(23, 2, 150, '2018-07-25 20:29:02', '2018-07-25 20:29:50', '2018-08-30', '2018-09-30', 0x31, 'Pago Final de la segunda Mensualidad.', 1, '2018-07-25', 15, 25),
+(24, 2, 200, '2018-07-25 20:31:25', '2018-07-25 20:31:25', '2018-08-23', '2018-09-23', 0x31, 'pago por concepto de mensualidad #2', 1, '2018-07-25', 14, 26),
+(25, 1, 100, '2018-07-25 20:33:56', '2018-07-25 20:33:56', '2018-07-30', '2018-08-30', 0x31, 'pago por concepto de mensualidad #1', 1, '2018-07-25', 18, 27),
+(26, 1, 200, '2018-07-25 20:38:27', '2018-07-25 20:38:27', '2018-07-25', '2018-08-25', 0x31, 'pago por concepto de mensualidad #1', 1, '2018-07-25', 19, 28),
+(27, 2, 200, '2018-07-25 20:38:53', '2018-07-25 20:38:53', '2018-08-25', '2018-09-25', 0x31, 'pago por concepto de mensualidad #2', 1, '2018-07-25', 19, 29),
+(28, 2, 200, '2018-07-25 20:42:49', '2018-07-25 20:42:49', '2018-08-23', '2018-09-23', 0x31, 'pago por concepto de mensualidad #2', 1, '2018-07-25', 13, 30),
+(29, 1, 500, '2018-07-25 21:03:19', '2018-07-25 21:03:19', '2018-07-30', '2018-08-30', 0x31, 'pago completo por concepto del curso.', 1, '2018-07-25', 20, 31),
+(30, 1, 150, '2018-07-27 14:09:45', '2018-07-27 14:09:45', '2018-07-30', '2018-08-30', 0x31, 'pago por concepto de mensualidad #1', 1, '2018-07-27', 21, 32),
+(31, 1, 250, '2018-07-27 14:53:33', '2018-07-27 14:53:33', '2018-07-30', '2018-08-30', 0x30, 'pago parcial por concepto de mensualidad #1', 1, '2018-07-27', 22, 33);
 
 -- --------------------------------------------------------
 
@@ -650,19 +702,33 @@ CREATE TABLE `menu_items` (
 --
 
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
-(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 1, '2018-07-20 18:48:28', '2018-07-20 18:48:28', 'voyager.dashboard', NULL),
 (2, 1, 'Media', '', '_self', 'voyager-images', NULL, 5, 1, '2018-07-20 18:48:29', '2018-07-21 08:22:22', 'voyager.media.index', NULL),
-(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 6, '2018-07-20 18:48:29', '2018-07-20 19:22:06', NULL, NULL),
+(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 5, '2018-07-20 18:48:29', '2018-07-27 12:35:49', NULL, NULL),
 (6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 2, '2018-07-20 18:48:29', '2018-07-21 08:22:22', 'voyager.menus.index', NULL),
 (7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 3, '2018-07-20 18:48:29', '2018-07-21 08:22:22', 'voyager.database.index', NULL),
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 4, '2018-07-20 18:48:29', '2018-07-21 08:22:22', 'voyager.compass.index', NULL),
 (9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 5, '2018-07-20 18:48:29', '2018-07-21 08:22:22', 'voyager.bread.index', NULL),
 (10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, 5, 7, '2018-07-20 18:48:29', '2018-07-21 08:22:22', 'voyager.settings.index', NULL),
 (14, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 6, '2018-07-20 18:48:45', '2018-07-21 08:22:22', 'voyager.hooks', NULL),
-(15, 1, 'Seguridad', '/admin/security', '_self', 'voyager-key', '#000000', NULL, 5, '2018-07-20 19:02:16', '2018-07-20 19:22:06', NULL, ''),
-(16, 1, 'Inscripciónes', '/admin/inscription', '_self', 'voyager-pen', '#000000', NULL, 2, '2018-07-20 19:16:20', '2018-07-20 19:16:28', NULL, ''),
-(17, 1, 'Programación', '/admin/programming', '_self', 'voyager-params', '#000000', NULL, 3, '2018-07-20 19:21:02', '2018-07-20 19:22:32', NULL, ''),
-(18, 1, 'Notas', '/admin/notes', '_self', 'voyager-documentation', '#000000', NULL, 4, '2018-07-20 19:21:57', '2018-07-20 19:22:06', NULL, '');
+(15, 1, 'Seguridad', '', '_self', 'voyager-key', '#000000', NULL, 4, '2018-07-20 19:02:16', '2018-07-27 12:46:13', NULL, ''),
+(16, 1, 'Inscripciónes', '', '_self', 'voyager-pen', '#000000', NULL, 1, '2018-07-20 19:16:20', '2018-07-27 12:35:49', NULL, ''),
+(17, 1, 'Programación', '', '_self', 'voyager-params', '#000000', NULL, 2, '2018-07-20 19:21:02', '2018-07-27 12:35:49', NULL, ''),
+(18, 1, 'Notas', '/admin/notes', '_self', 'voyager-documentation', '#000000', NULL, 3, '2018-07-20 19:21:57', '2018-07-27 12:35:49', NULL, ''),
+(19, 1, 'Control', '', '_self', NULL, '#000000', 16, 1, '2018-07-27 12:22:56', '2018-07-27 15:28:02', 'control_index', 'null'),
+(20, 1, 'Mensualidades', '', '_self', NULL, '#000000', 16, 3, '2018-07-27 12:25:36', '2018-07-27 14:29:05', 'voyager.mensualidades.index', NULL),
+(21, 1, 'Pagos', '', '_self', NULL, '#000000', 16, 5, '2018-07-27 12:26:07', '2018-07-27 14:29:05', 'voyager.pagos.index', NULL),
+(22, 1, 'Recibos', '', '_self', NULL, '#000000', 16, 4, '2018-07-27 12:28:15', '2018-07-27 14:29:05', 'voyager.recibos.index', NULL),
+(23, 1, 'Inscripciones', '', '_self', NULL, '#000000', 18, 3, '2018-07-27 12:29:57', '2018-07-27 13:44:19', 'voyager.inscripciones.index', 'null'),
+(24, 1, 'Carreras', '', '_self', NULL, '#000000', 17, 2, '2018-07-27 12:33:39', '2018-07-27 12:35:52', 'voyager.carreras.index', NULL),
+(25, 1, 'Asignaturas', '', '_self', NULL, '#000000', 17, 3, '2018-07-27 12:34:02', '2018-07-27 12:35:55', 'voyager.asignaturas.index', NULL),
+(26, 1, 'Horarios', '', '_self', NULL, '#000000', 17, 4, '2018-07-27 12:34:23', '2018-07-27 12:35:59', 'voyager.horarios.index', NULL),
+(27, 1, 'Registros', '', '_self', NULL, '#000000', 17, 1, '2018-07-27 12:35:15', '2018-07-27 14:49:15', 'prog_index', 'null'),
+(28, 1, 'Registros', '', '_self', NULL, '#000000', 18, 1, '2018-07-27 12:37:22', '2018-07-27 14:58:08', 'notas_index', 'null'),
+(29, 1, 'Educadores', '', '_self', NULL, '#000000', 18, 2, '2018-07-27 12:39:30', '2018-07-27 12:39:43', 'voyager.educadores.index', NULL),
+(30, 1, 'Usuarios', '', '_self', NULL, '#000000', 15, 1, '2018-07-27 12:45:15', '2018-07-27 12:46:01', 'voyager.users.index', NULL),
+(31, 1, 'Roles', '', '_self', NULL, '#000000', 15, 2, '2018-07-27 12:45:30', '2018-07-27 12:46:06', 'voyager.roles.index', NULL),
+(32, 1, 'Permisos', '', '_self', NULL, '#000000', 15, 3, '2018-07-27 12:45:49', '2018-07-27 12:46:08', 'voyager.permissions.index', NULL),
+(33, 1, 'Estudiantes', '', '_self', NULL, '#000000', 16, 2, '2018-07-27 13:38:36', '2018-07-27 14:29:02', 'voyager.estudiantes.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -750,14 +816,12 @@ CREATE TABLE `notas` (
 --
 
 INSERT INTO `notas` (`id`, `programacion_id`, `nota`, `created_at`, `updated_at`, `insc_id`) VALUES
-(1, 1, 88, '2018-06-08 21:40:44', '2018-06-08 21:40:44', 3),
-(2, 1, 79, '2018-06-08 21:40:44', '2018-06-08 21:40:44', 4),
-(3, 1, 45, '2018-06-08 21:40:44', '2018-06-08 21:40:44', 1),
-(4, 1, 55, '2018-06-08 21:40:44', '2018-06-08 21:40:44', 2),
-(5, 2, 90, '2018-06-11 13:09:23', '2018-06-11 13:09:23', 8),
-(6, 2, 80, '2018-06-11 13:09:23', '2018-06-11 13:09:23', 7),
-(7, 2, 22, '2018-06-11 13:09:23', '2018-06-11 13:09:23', 6),
-(8, 2, 50, '2018-06-11 13:09:23', '2018-06-11 13:09:23', 5);
+(5, 7, 88, '2018-07-27 14:59:57', '2018-07-27 14:59:57', 22),
+(6, 7, 56, '2018-07-27 14:59:57', '2018-07-27 14:59:57', 13),
+(7, 7, 66, '2018-07-27 14:59:57', '2018-07-27 14:59:57', 17),
+(8, 7, 99, '2018-07-27 14:59:57', '2018-07-27 14:59:57', 14),
+(9, 7, 55, '2018-07-27 14:59:57', '2018-07-27 14:59:57', 18),
+(10, 7, 79, '2018-07-27 14:59:57', '2018-07-27 14:59:57', 16);
 
 -- --------------------------------------------------------
 
@@ -782,11 +846,10 @@ CREATE TABLE `pagos` (
 --
 
 INSERT INTO `pagos` (`id`, `fecha_pago`, `mensualidad_id`, `user_id`, `monto`, `observaciones`, `created_at`, `updated_at`, `recibo_id`) VALUES
-(1, '2018-06-08 12:19:06', 2, 1, 100, 'Pago por Concepto de Mensualidad #1', '2018-06-08 16:19:06', '2018-06-08 16:19:06', 2),
-(2, '2018-06-08 16:19:05', 4, 6, 100, 'Pago por Concepto de Mensualidad #1', '2018-06-08 20:19:05', '2018-06-08 20:19:05', 4),
-(3, '2018-07-23 15:20:22', 10, 1, 100, 'Pago parcial por la primera mensualidad.', '2018-07-23 19:20:22', '2018-07-23 19:20:22', 10),
-(4, '2018-07-23 15:51:53', 11, 1, 100, 'pago por concepto de mensualidad #1', '2018-07-23 19:51:53', '2018-07-23 19:51:53', 11),
-(5, '2018-07-23 16:04:02', 10, 1, 50, 'Pago final', '2018-07-23 20:04:02', '2018-07-23 20:04:02', 12);
+(6, '2018-07-23 22:32:49', 14, 1, 200, 'pago parcial por concepto de mensualidad #1', '2018-07-24 02:32:49', '2018-07-24 02:32:49', 15),
+(7, '2018-07-25 16:29:02', 23, 1, 100, 'pago parcial por concepto de mensualidad #2', '2018-07-25 20:29:02', '2018-07-25 20:29:02', 24),
+(8, '2018-07-25 16:29:50', 23, 1, 50, 'Pago Final de la segunda Mensualidad.', '2018-07-25 20:29:50', '2018-07-25 20:29:50', 25),
+(9, '2018-07-27 10:53:33', 31, 1, 250, 'pago parcial por concepto de mensualidad #1', '2018-07-27 14:53:33', '2018-07-27 14:53:33', 33);
 
 -- --------------------------------------------------------
 
@@ -916,7 +979,47 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (88, 'read_educadores', 'educadores', '2018-07-21 08:22:02', '2018-07-21 08:22:02'),
 (89, 'edit_educadores', 'educadores', '2018-07-21 08:22:02', '2018-07-21 08:22:02'),
 (90, 'add_educadores', 'educadores', '2018-07-21 08:22:02', '2018-07-21 08:22:02'),
-(91, 'delete_educadores', 'educadores', '2018-07-21 08:22:02', '2018-07-21 08:22:02');
+(91, 'delete_educadores', 'educadores', '2018-07-21 08:22:02', '2018-07-21 08:22:02'),
+(92, 'browse_programaciones', 'programaciones', '2018-07-24 12:15:01', '2018-07-24 12:15:01'),
+(93, 'read_programaciones', 'programaciones', '2018-07-24 12:15:01', '2018-07-24 12:15:01'),
+(94, 'edit_programaciones', 'programaciones', '2018-07-24 12:15:01', '2018-07-24 12:15:01'),
+(95, 'add_programaciones', 'programaciones', '2018-07-24 12:15:01', '2018-07-24 12:15:01'),
+(96, 'delete_programaciones', 'programaciones', '2018-07-24 12:15:01', '2018-07-24 12:15:01'),
+(97, 'browse_documentos', 'documentos', '2018-07-24 20:55:29', '2018-07-24 20:55:29'),
+(98, 'read_documentos', 'documentos', '2018-07-24 20:55:29', '2018-07-24 20:55:29'),
+(99, 'edit_documentos', 'documentos', '2018-07-24 20:55:29', '2018-07-24 20:55:29'),
+(100, 'add_documentos', 'documentos', '2018-07-24 20:55:29', '2018-07-24 20:55:29'),
+(101, 'delete_documentos', 'documentos', '2018-07-24 20:55:29', '2018-07-24 20:55:29'),
+(102, 'browse_niveles', 'niveles', '2018-07-24 21:42:56', '2018-07-24 21:42:56'),
+(103, 'read_niveles', 'niveles', '2018-07-24 21:42:56', '2018-07-24 21:42:56'),
+(104, 'edit_niveles', 'niveles', '2018-07-24 21:42:56', '2018-07-24 21:42:56'),
+(105, 'add_niveles', 'niveles', '2018-07-24 21:42:56', '2018-07-24 21:42:56'),
+(106, 'delete_niveles', 'niveles', '2018-07-24 21:42:56', '2018-07-24 21:42:56'),
+(107, 'browse_notas', 'notas', '2018-07-24 21:43:55', '2018-07-24 21:43:55'),
+(108, 'read_notas', 'notas', '2018-07-24 21:43:55', '2018-07-24 21:43:55'),
+(109, 'edit_notas', 'notas', '2018-07-24 21:43:55', '2018-07-24 21:43:55'),
+(110, 'add_notas', 'notas', '2018-07-24 21:43:55', '2018-07-24 21:43:55'),
+(111, 'delete_notas', 'notas', '2018-07-24 21:43:55', '2018-07-24 21:43:55'),
+(112, 'browse_periodos', 'periodos', '2018-07-24 21:45:18', '2018-07-24 21:45:18'),
+(113, 'read_periodos', 'periodos', '2018-07-24 21:45:18', '2018-07-24 21:45:18'),
+(114, 'edit_periodos', 'periodos', '2018-07-24 21:45:18', '2018-07-24 21:45:18'),
+(115, 'add_periodos', 'periodos', '2018-07-24 21:45:18', '2018-07-24 21:45:18'),
+(116, 'delete_periodos', 'periodos', '2018-07-24 21:45:18', '2018-07-24 21:45:18'),
+(117, 'browse_profesiones', 'profesiones', '2018-07-24 21:46:10', '2018-07-24 21:46:10'),
+(118, 'read_profesiones', 'profesiones', '2018-07-24 21:46:10', '2018-07-24 21:46:10'),
+(119, 'edit_profesiones', 'profesiones', '2018-07-24 21:46:10', '2018-07-24 21:46:10'),
+(120, 'add_profesiones', 'profesiones', '2018-07-24 21:46:10', '2018-07-24 21:46:10'),
+(121, 'delete_profesiones', 'profesiones', '2018-07-24 21:46:10', '2018-07-24 21:46:10'),
+(122, 'browse_sexualidades', 'sexualidades', '2018-07-24 21:46:59', '2018-07-24 21:46:59'),
+(123, 'read_sexualidades', 'sexualidades', '2018-07-24 21:46:59', '2018-07-24 21:46:59'),
+(124, 'edit_sexualidades', 'sexualidades', '2018-07-24 21:46:59', '2018-07-24 21:46:59'),
+(125, 'add_sexualidades', 'sexualidades', '2018-07-24 21:46:59', '2018-07-24 21:46:59'),
+(126, 'delete_sexualidades', 'sexualidades', '2018-07-24 21:46:59', '2018-07-24 21:46:59'),
+(127, 'browse_tipos', 'tipos', '2018-07-24 21:47:38', '2018-07-24 21:47:38'),
+(128, 'read_tipos', 'tipos', '2018-07-24 21:47:38', '2018-07-24 21:47:38'),
+(129, 'edit_tipos', 'tipos', '2018-07-24 21:47:38', '2018-07-24 21:47:38'),
+(130, 'add_tipos', 'tipos', '2018-07-24 21:47:38', '2018-07-24 21:47:38'),
+(131, 'delete_tipos', 'tipos', '2018-07-24 21:47:38', '2018-07-24 21:47:38');
 
 -- --------------------------------------------------------
 
@@ -935,6 +1038,7 @@ CREATE TABLE `permission_role` (
 
 INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (1, 1),
+(1, 2),
 (2, 1),
 (3, 1),
 (4, 1),
@@ -1008,7 +1112,47 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (88, 1),
 (89, 1),
 (90, 1),
-(91, 1);
+(91, 1),
+(92, 1),
+(93, 1),
+(94, 1),
+(95, 1),
+(96, 1),
+(97, 1),
+(98, 1),
+(99, 1),
+(100, 1),
+(101, 1),
+(102, 1),
+(103, 1),
+(104, 1),
+(105, 1),
+(106, 1),
+(107, 1),
+(108, 1),
+(109, 1),
+(110, 1),
+(111, 1),
+(112, 1),
+(113, 1),
+(114, 1),
+(115, 1),
+(116, 1),
+(117, 1),
+(118, 1),
+(119, 1),
+(120, 1),
+(121, 1),
+(122, 1),
+(123, 1),
+(124, 1),
+(125, 1),
+(126, 1),
+(127, 1),
+(128, 1),
+(129, 1),
+(130, 1),
+(131, 1);
 
 -- --------------------------------------------------------
 
@@ -1061,8 +1205,7 @@ CREATE TABLE `programaciones` (
 --
 
 INSERT INTO `programaciones` (`id`, `fecha`, `user_id`, `asignatura_id`, `observacion`, `created_at`, `updated_at`, `educador_id`, `estado`, `horario_id`, `nota_estado`) VALUES
-(1, '2018-06-08 14:47:22', 1, 15, '', '2018-06-08 18:47:22', '2018-06-08 21:40:45', 1, 0x31, 1, 0x30),
-(2, '2018-06-08 17:57:56', 1, 16, '', '2018-06-08 21:57:56', '2018-06-11 13:09:24', 2, 0x31, 2, 0x30);
+(7, '2018-07-27 10:41:57', 1, 14, NULL, '2018-07-27 14:41:57', '2018-07-27 14:59:57', 5, 0x31, 5, 0x30);
 
 -- --------------------------------------------------------
 
@@ -1083,14 +1226,12 @@ CREATE TABLE `programacion_estudiante` (
 --
 
 INSERT INTO `programacion_estudiante` (`id`, `programacion_id`, `inscripciones_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '2018-06-08 20:19:27', '2018-06-08 20:19:27'),
-(2, 1, 2, '2018-06-08 20:19:32', '2018-06-08 20:19:32'),
-(3, 1, 3, '2018-06-08 20:19:37', '2018-06-08 20:19:37'),
-(4, 1, 4, '2018-06-08 20:19:42', '2018-06-08 20:19:42'),
-(5, 2, 7, '2018-06-08 22:10:39', '2018-06-08 22:10:39'),
-(6, 2, 6, '2018-06-08 22:10:44', '2018-06-08 22:10:44'),
-(7, 2, 5, '2018-06-08 22:10:49', '2018-06-08 22:10:49'),
-(8, 2, 8, '2018-06-11 13:01:55', '2018-06-11 13:01:55');
+(13, 7, 13, '2018-07-27 14:44:11', '2018-07-27 14:44:11'),
+(14, 7, 17, '2018-07-27 14:49:50', '2018-07-27 14:49:50'),
+(15, 7, 16, '2018-07-27 14:52:13', '2018-07-27 14:52:13'),
+(16, 7, 22, '2018-07-27 14:58:45', '2018-07-27 14:58:45'),
+(17, 7, 14, '2018-07-27 14:59:00', '2018-07-27 14:59:00'),
+(18, 7, 18, '2018-07-27 14:59:10', '2018-07-27 14:59:10');
 
 -- --------------------------------------------------------
 
@@ -1116,20 +1257,25 @@ CREATE TABLE `recibos` (
 --
 
 INSERT INTO `recibos` (`id`, `numero`, `concepto`, `updated_at`, `monto_numeral`, `monto_literal`, `fecha`, `user_id`, `created_at`, `estudiante_id`) VALUES
-(1, '000001/2018', 'Pago por Concepto de Mensualidad #1', '2018-06-08 13:56:08', 100, '100,00 (Cien  00/100 Bolivianos)', '2018-06-08 09:56:08', 1, '2018-06-08 13:56:08', 1),
-(2, '000002/2018', 'Pago por Concepto de Mensualidad #1', '2018-06-08 16:19:05', 100, '100,00 (Cien  00/100 Bolivianos)', '2018-06-08 12:19:05', 1, '2018-06-08 16:19:05', 2),
-(3, '000003/2018', 'Pago por Concepto de Mensualidad #1', '2018-06-08 20:08:58', 100, '100,00 (Cien  00/100 Bolivianos)', '2018-06-08 16:08:58', 6, '2018-06-08 20:08:58', 3),
-(4, '000004/2018', 'Pago por Concepto de Mensualidad #1', '2018-06-08 20:19:05', 100, '100,00 (Cien  00/100 Bolivianos)', '2018-06-08 16:19:05', 6, '2018-06-08 20:19:05', 4),
-(5, '000005/2018', 'Pago por Concepto de Mensualidad #1', '2018-06-08 20:42:48', 250, '250,00 (Doscientos cincuenta  00/100 Bolivianos)', '2018-06-08 16:42:48', 6, '2018-06-08 20:42:48', 5),
-(6, '000006/2018', 'Pago por Concepto de Mensualidad #1', '2018-06-08 20:45:15', 150, '150,00 (Ciento cincuenta  00/100 Bolivianos)', '2018-06-08 16:45:15', 6, '2018-06-08 20:45:15', 6),
-(7, '000007/2018', 'Pago por Concepto de Mensualidad #1', '2018-06-08 22:09:28', 250, '250,00 (Doscientos cincuenta  00/100 Bolivianos)', '2018-06-08 18:09:28', 1, '2018-06-08 22:09:28', 7),
-(8, '000008/2018', 'Pago por Concepto de Mensualidad #1', '2018-06-11 12:45:07', 150, '150,00 (Ciento cincuenta  00/100 Bolivianos)', '2018-06-11 08:45:07', 1, '2018-06-11 12:45:07', 8),
-(9, '000009/2018', 'Pago por Concepto de Mensualidad #1', '2018-07-17 21:58:57', 250, '250,00 (Doscientos cincuenta  00/100 Bolivianos)', '2018-07-17 17:58:57', 6, '2018-07-17 21:58:57', 9),
-(10, '000010/2018', 'Pago parcial por la primera mensualidad.', '2018-07-23 19:20:22', 100, '100,00 (Cien  00/100 Bolivianos)', '2018-07-23 15:20:22', 1, '2018-07-23 19:20:22', 9),
-(11, '000011/2018', 'pago por concepto de mensualidad #1', '2018-07-23 19:51:53', 100, '100,00 (Cien  00/100 Bolivianos)', '2018-07-23 15:51:53', 1, '2018-07-23 19:51:53', 9),
-(12, '000012/2018', 'Pago final', '2018-07-23 20:04:02', 50, '50,00 (Cincuenta  00/100 Bolivianos)', '2018-07-23 16:04:02', 1, '2018-07-23 20:04:02', 9),
-(13, '000013/2018', 'pago por concepto de mensualidad #', '2018-07-23 21:04:09', 200, '200,00 (Doscientos  00/100 Bolivianos)', '2018-07-23 17:04:09', 1, '2018-07-23 21:04:09', 10),
-(14, '000014/2018', 'pago por concepto de mensualidad #2', '2018-07-23 21:13:17', 200, '200,00 (Doscientos  00/100 Bolivianos)', '2018-07-23 17:13:17', 1, '2018-07-23 21:13:17', 10);
+(15, '000001/2018', 'pago parcial por concepto de mensualidad #1', '2018-07-24 02:32:49', 200, '200,00 (Doscientos  00/100 Bolivianos)', '2018-07-23 22:32:49', 1, '2018-07-24 02:32:49', 11),
+(16, '000002/2018', 'pago parcial por concepto de mensualidad #1', '2018-07-24 02:58:02', 100, '100,00 (Cien  00/100 Bolivianos)', '2018-07-23 22:58:02', 1, '2018-07-24 02:58:02', 12),
+(17, '000003/2018', 'pago por concepto de mensualidad #', '2018-07-24 03:52:41', 200, '200,00 (Doscientos  00/100 Bolivianos)', '2018-07-23 23:52:41', 1, '2018-07-24 03:52:41', 13),
+(18, '000004/2018', 'pago por concepto de mensualidad #', '2018-07-24 03:55:13', 200, '200,00 (Doscientos  00/100 Bolivianos)', '2018-07-23 23:55:13', 1, '2018-07-24 03:55:13', 14),
+(19, '000005/2018', 'pago por concepto de mensualidad #1', '2018-07-25 13:06:29', 150, '150,00 (Ciento cincuenta  00/100 Bolivianos)', '2018-07-25 09:06:28', 1, '2018-07-25 13:06:29', 15),
+(20, '000006/2018', 'pago por concepto de mensualidad #1', '2018-07-25 13:16:42', 250, '250,00 (Doscientos cincuenta  00/100 Bolivianos)', '2018-07-25 09:16:42', 1, '2018-07-25 13:16:42', 16),
+(21, '000007/2018', 'pago por concepto de mensualidad #1', '2018-07-25 18:59:50', 200, '200,00 (Doscientos  00/100 Bolivianos)', '2018-07-25 14:59:50', 1, '2018-07-25 18:59:50', 17),
+(22, '000008/2018', 'pago por concepto de mensualidad #2', '2018-07-25 20:23:32', 250, '250,00 (Doscientos cincuenta  00/100 Bolivianos)', '2018-07-25 16:23:32', 1, '2018-07-25 20:23:32', 11),
+(23, '000009/2018', 'pago por concepto de mensualidad #2', '2018-07-25 20:25:38', 250, '250,00 (Doscientos cincuenta  00/100 Bolivianos)', '2018-07-25 16:25:38', 1, '2018-07-25 20:25:38', 12),
+(24, '000010/2018', 'pago parcial por concepto de mensualidad #2', '2018-07-25 20:29:02', 100, '100,00 (Cien  00/100 Bolivianos)', '2018-07-25 16:29:02', 1, '2018-07-25 20:29:02', 15),
+(25, '000011/2018', 'Pago Final de la segunda Mensualidad.', '2018-07-25 20:29:50', 50, '50,00 (Cincuenta  00/100 Bolivianos)', '2018-07-25 16:29:50', 1, '2018-07-25 20:29:50', 15),
+(26, '000012/2018', 'pago por concepto de mensualidad #2', '2018-07-25 20:31:25', 200, '200,00 (Doscientos  00/100 Bolivianos)', '2018-07-25 16:31:25', 1, '2018-07-25 20:31:25', 14),
+(27, '000013/2018', 'pago por concepto de mensualidad #1', '2018-07-25 20:33:55', 100, '100,00 (Cien  00/100 Bolivianos)', '2018-07-25 16:33:55', 1, '2018-07-25 20:33:55', 18),
+(28, '000014/2018', 'pago por concepto de mensualidad #1', '2018-07-25 20:38:27', 200, '200,00 (Doscientos  00/100 Bolivianos)', '2018-07-25 16:38:27', 1, '2018-07-25 20:38:27', 19),
+(29, '000015/2018', 'pago por concepto de mensualidad #2', '2018-07-25 20:38:53', 200, '200,00 (Doscientos  00/100 Bolivianos)', '2018-07-25 16:38:53', 1, '2018-07-25 20:38:53', 19),
+(30, '000016/2018', 'pago por concepto de mensualidad #2', '2018-07-25 20:42:49', 200, '200,00 (Doscientos  00/100 Bolivianos)', '2018-07-25 16:42:49', 1, '2018-07-25 20:42:49', 13),
+(31, '000017/2018', 'pago completo por concepto del curso.', '2018-07-25 21:03:19', 500, '500,00 (Quinientos  00/100 Bolivianos)', '2018-07-25 17:03:19', 1, '2018-07-25 21:03:19', 20),
+(32, '000018/2018', 'pago por concepto de mensualidad #1', '2018-07-27 14:09:45', 150, '150,00 (Ciento cincuenta  00/100 Bolivianos)', '2018-07-27 10:09:45', 1, '2018-07-27 14:09:45', 21),
+(33, '000019/2018', 'pago parcial por concepto de mensualidad #1', '2018-07-27 14:53:33', 250, '250,00 (Doscientos cincuenta  00/100 Bolivianos)', '2018-07-27 10:53:33', 1, '2018-07-27 14:53:33', 22);
 
 -- --------------------------------------------------------
 
@@ -1151,7 +1297,7 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) VALUES
 (1, 'admin', 'Administrator', '2018-07-20 18:48:29', '2018-07-20 18:48:29'),
-(2, 'user', 'Normal User', '2018-07-20 18:48:30', '2018-07-20 18:48:30');
+(2, 'default', 'default', '2018-07-20 18:48:30', '2018-07-20 18:48:30');
 
 -- --------------------------------------------------------
 
@@ -1185,7 +1331,8 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
 (9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
 (10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin'),
-(11, 'admin.concepto_recibo1', 'concepto_recibo1', 'pago por concepto de mensualidad #', NULL, 'text', 6, 'Admin');
+(11, 'admin.concepto_recibo1', 'concepto_recibo1', 'pago por concepto de mensualidad #', NULL, 'text', 6, 'Admin'),
+(12, 'admin.paginacion', 'paginacion', '6', NULL, 'text', 7, 'Admin');
 
 -- --------------------------------------------------------
 
@@ -1294,7 +1441,7 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
-  `role_id` int(10) UNSIGNED DEFAULT NULL,
+  `role_id` int(10) UNSIGNED DEFAULT '2',
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `avatar` varchar(255) COLLATE utf8_unicode_ci DEFAULT 'users/default.png',
@@ -1310,8 +1457,15 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', '$2y$10$KEzi5hT.xevsy5S2.NA98.eBWFGTebLBRJFMFEzSF/PCeZIVWE3A2', 'Cd7fiTBbzJkBwpLqB0qYmizTAoQqOKyyBiD8qeXXahuuNhSfKrj6xwzZes8e', NULL, '2018-07-20 18:48:41', '2018-07-20 18:48:41'),
-(2, 1, 'luis flores', 'luis..flores@gmail.com', 'users\\July2018\\NedQfDuaTZys4Zm0bVFS.jpg', '$2y$10$./SjwdYaLAY07SFCQVKiweEmdIpT9LeUU5hPEBqxPtlTggJzhh8o6', NULL, '{\"locale\":\"en\"}', '2018-07-21 01:23:55', '2018-07-21 01:23:55');
+(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', '$2y$10$KEzi5hT.xevsy5S2.NA98.eBWFGTebLBRJFMFEzSF/PCeZIVWE3A2', 'UE6FbEFA9eWk5tHiSpA0YXX3IYYzHFGhn4vOfcRuIfSUR2lxxSPT4o6KrQXN', NULL, '2018-07-20 18:48:41', '2018-07-20 18:48:41'),
+(2, 2, 'luis flores', 'admin@admin.com', 'users\\July2018\\NedQfDuaTZys4Zm0bVFS.jpg', '$2y$10$y2Oi7.xlkEADxKRekdHq1OyS/lTCiH4B2iSbbLyZAmIWSnwf1/jea', NULL, '{\"locale\":\"en\"}', '2018-07-21 01:23:55', '2018-07-24 02:13:58'),
+(3, 2, 'hernan pino', 'hernan.pino@admin.com', 'users/default.png', '$2y$10$.uG2q74CozCni21qTzf3rOvZ/j7fg60TVrbXLT/NcRMkK3rFnxep2', NULL, NULL, '2018-07-24 19:58:23', '2018-07-24 19:58:24'),
+(4, 2, 'paulo suarez', 'paulo.suarez@admin.com', 'users/default.png', '$2y$10$.nSgZpUTocbKTyLzX4a8E.a2TGNZmT4Epw1GlJ9.a6muvW3wJlYXu', '8n7yaTSGj7c9FYUCktpPT6CNZi6LFDWXQWw946qxMVNPard5LwPDGoRN6VSS', NULL, '2018-07-24 20:03:26', '2018-07-24 20:03:26'),
+(5, 2, 'Fernando alcides', 'fernando.alcides@admin.com', 'users/default.png', '$2y$10$Dh1LgSCoQ231NKWjWY4jF.Sni4wqEpPSYhLtM7L8opKwpGo8wZUGC', 'j8PqEJlyL6kGPznP9GsjPBJdtKalTwDlKYIoBIgd3G0ovpzpKaiu1eL4hJ22', NULL, '2018-07-24 20:09:14', '2018-07-24 20:09:15'),
+(6, 2, 'pedro garcia', 'pedro.garcia@admin.com', 'users\\July2018\\wW8pPEY3CQ8xkN7mWRfr.jpg', '$2y$10$VeESM2t2Q7MQiCHy5yj79ena40SMBj9JPECrHvGEdM3/MOgccpG9m', 'j9XZm10sOF14iJYWjzlaWRQTEx4YwSCYls9M26jD4MMEzaZTa7uivqsLWosl', '{\"locale\":\"es\"}', '2018-07-24 20:10:36', '2018-07-24 20:21:00'),
+(7, 2, 'luis alpire', 'luis.alpire@admin.com', 'users/default.png', '$2y$10$9HTKTSqKWi38ZE/sf/uEieI1oMIZPtZMg5qqZLNkvnbxrm/DMvNKy', 'oOqk8nNo58Z4KoeseQE4CCRDsG9TO0Z2YXtb6p9sUSClYuye9hGKxAVERhaV', NULL, '2018-07-24 20:27:49', '2018-07-24 20:27:49'),
+(8, 2, 'alejandro molina', 'ale.molina@admin.com', 'users/default.png', '$2y$10$iRnYn/hWFQKLFwpLZIvhoeIIgDVcvXJ0e9yo3ehETvXz9ekDGkhUS', '4FzabSdWA1LSf4SdLPOgVTM4h6RhXuRkVzm8t6NLIlu85T9coDVwq7p8ltSH', NULL, '2018-07-24 20:34:40', '2018-07-24 20:34:40'),
+(9, 2, 'juan cholima', 'juan.cholima@admin.com', 'users/default.png', '$2y$10$Q2aFMfgTju05qR2O5RGQ8eYhFi1rSVh5nN8bquJyzIGJyZibLRytm', 'fBcADkA0ZRBeae9XNaXyulXyNkTVLqfLGOQ0B0gPf8akOt5JKUCTpZ2PjPrX', NULL, '2018-07-24 20:38:29', '2018-07-24 20:38:29');
 
 -- --------------------------------------------------------
 
@@ -1542,7 +1696,6 @@ ALTER TABLE `translations`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`),
   ADD KEY `users_role_id_foreign` (`role_id`);
 
 --
@@ -1579,13 +1732,13 @@ ALTER TABLE `carreras_asignaturas`
 -- AUTO_INCREMENT de la tabla `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=215;
 
 --
 -- AUTO_INCREMENT de la tabla `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de la tabla `documentos`
@@ -1603,7 +1756,7 @@ ALTER TABLE `educadores`
 -- AUTO_INCREMENT de la tabla `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `horarios`
@@ -1615,31 +1768,31 @@ ALTER TABLE `horarios`
 -- AUTO_INCREMENT de la tabla `imagenes_insc`
 --
 ALTER TABLE `imagenes_insc`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `imagenes_prog`
 --
 ALTER TABLE `imagenes_prog`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `inscripciones`
 --
 ALTER TABLE `inscripciones`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `insc_estados`
 --
 ALTER TABLE `insc_estados`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `mensualidades`
 --
 ALTER TABLE `mensualidades`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `menus`
@@ -1651,7 +1804,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT de la tabla `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -1669,13 +1822,13 @@ ALTER TABLE `niveles`
 -- AUTO_INCREMENT de la tabla `notas`
 --
 ALTER TABLE `notas`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `pagos`
 --
 ALTER TABLE `pagos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `periodos`
@@ -1687,7 +1840,7 @@ ALTER TABLE `periodos`
 -- AUTO_INCREMENT de la tabla `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
 -- AUTO_INCREMENT de la tabla `profesiones`
@@ -1699,19 +1852,19 @@ ALTER TABLE `profesiones`
 -- AUTO_INCREMENT de la tabla `programaciones`
 --
 ALTER TABLE `programaciones`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `programacion_estudiante`
 --
 ALTER TABLE `programacion_estudiante`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `recibos`
 --
 ALTER TABLE `recibos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -1723,7 +1876,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `sexualidades`
@@ -1747,7 +1900,7 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas

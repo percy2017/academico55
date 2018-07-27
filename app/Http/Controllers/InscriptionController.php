@@ -17,48 +17,49 @@ use App\ImagenesInsc;
 class InscriptionController extends Controller
 {
     public function __construct()
-    {
+    {   
         $this->middleware('auth');
     }
     
     public function index()
     {
-        //return 'hola';
-        return view('inscription.index');
+        $total_men = DB::table('mensualidades')->count();
+        $total_rec = DB::table('recibos')->count();
+        $total_ins = DB::table('inscripciones')->count();
+        $total_pag = DB::table('pagos')->count();
+        return view('inscription.index',compact('total_men','total_rec','total_ins','total_pag'));
     }
+
     public function control_index()
     {   
-
         $inscripciones = DB::table('inscripciones')
                             ->join('estudiantes','estudiantes.id', '=','inscripciones.estudiante_id')
                             ->join('carreras','carreras.id', '=','inscripciones.carrera_id')
-                            ->join('horarios','horarios.id', '=','inscripciones.tipo_id')
-                            ->join('tipos','tipos.id', '=','inscripciones.horario_id')
+                            ->join('horarios','horarios.id', '=','inscripciones.horario_id')
+                            ->join('tipos','tipos.id', '=','inscripciones.tipo_id')
                             ->select('inscripciones.*', 'estudiantes.num_documento', 'estudiantes.nombres', 'estudiantes.apellidos_paterno', 'estudiantes.apellidos_materno', 'carreras.nombre as carrera','horarios.nombre as horario','tipos.nombre as tipo','estudiantes.id as estudiante_id')
                             ->OrderBy('inscripciones.created_at','desc')
-                            ->paginate(6);
+                            ->paginate(setting('admin.paginacion'));
+        //return $inscripciones;
                             
-            $total = DB::table('inscripciones')
-                            ->join('estudiantes','estudiantes.id', '=','inscripciones.estudiante_id')
-                            ->join('carreras','carreras.id', '=','inscripciones.carrera_id')
-                            ->join('horarios','horarios.id', '=','inscripciones.tipo_id')
-                            ->join('tipos','tipos.id', '=','inscripciones.horario_id')
-                            ->count();
+        $total = DB::table('inscripciones')
+                        ->join('estudiantes','estudiantes.id', '=','inscripciones.estudiante_id')
+                        ->join('carreras','carreras.id', '=','inscripciones.carrera_id')
+                        ->join('horarios','horarios.id', '=','inscripciones.horario_id')
+                        ->join('tipos','tipos.id', '=','inscripciones.tipo_id')
+                        ->count();
 
-            $suma = DB::table('inscripciones')
-                            ->join('estudiantes','estudiantes.id', '=','inscripciones.estudiante_id')
-                            ->join('carreras','carreras.id', '=','inscripciones.carrera_id')
-                            ->join('horarios','horarios.id', '=','inscripciones.tipo_id')
-                            ->join('tipos','tipos.id', '=','inscripciones.horario_id')
-                            //->select('inscripciones.monto')
-                            ->sum('inscripciones.monto');
-            //return $suma;
+        $suma = DB::table('inscripciones')
+                        ->join('estudiantes','estudiantes.id', '=','inscripciones.estudiante_id')
+                        ->join('carreras','carreras.id', '=','inscripciones.carrera_id')
+                        ->join('horarios','horarios.id', '=','inscripciones.horario_id')
+                        ->join('tipos','tipos.id', '=','inscripciones.tipo_id')
+                        ->sum('inscripciones.monto');
 
-            $filtro = '';
-            $criterio ='';
-            //return dd($inscripciones);
-            return view('inscription.control_index',compact('inscripciones','criterio','filtro','total','suma'));
-        
+        $filtro = '';
+        $criterio ='';
+
+        return view('inscription.control_index',compact('inscripciones','criterio','filtro','total','suma'));
     }   
 
     public function control_create()
@@ -73,10 +74,8 @@ class InscriptionController extends Controller
     public function control_storage(Request $request)
     {
         //return $request->all();
-       $aux_cuota = $request->estado ? true : false; 
+        $aux_cuota = $request->estado ? true : false; 
 
-       //return dd($aux_cuota);
-        //Estudiante
         $estudiante = Estudiante::create([
         'nombres' => $request->nombres,
         'apellidos_paterno' => $request->apellidos_paterno,
@@ -148,14 +147,13 @@ class InscriptionController extends Controller
         }
 
         //$this->boleta($insc);
-        return redirect('/admin/inscription/control')->with(['message' => "Inscripción del estudiante ".$estudiante->mombres." ".$estudiante->apellidos_paterno." se realizo con exito.", 'alert-type' => 'info']);
+        return redirect('/admin/inscription/control/show/'.$insc->id)->with(['message' => "Inscripción del estudiante, se realizo con exito.", 'alert-type' => 'info']);
     }
 
     public function control_search(Request $datos)
     {
         $criterio = $datos->buscar;
         $filtro = $datos->filtro;
-        //return $filtro;
         if ($criterio) 
         {
             $inscripciones = DB::table('inscripciones')
@@ -165,30 +163,25 @@ class InscriptionController extends Controller
                             ->join('horarios','horarios.id', '=','inscripciones.horario_id')
                             ->select('inscripciones.*', 'estudiantes.num_documento', 'estudiantes.nombres', 'estudiantes.apellidos_paterno', 'estudiantes.apellidos_materno', 'carreras.nombre as carrera','horarios.nombre as horario', 'tipos.nombre as tipo')
                             ->where('estudiantes.'.$filtro,'like','%'.$criterio.'%')
-                            // ->Orwhere('estudiantes.nombres','like','%'.$criterio.'%')
-                            // ->Orwhere('estudiantes.apellidos_paterno','like','%'.$criterio.'%')
-                            // ->Orwhere('estudiantes.apellidos_materno','like','%'.$criterio.'%')
-                            // ->Orwhere('estudiantes.num_documento','like','%'.$criterio.'%')
-
                             ->OrderBy('inscripciones.created_at','desc')
-                            ->paginate(6);
+                            ->paginate(setting('admin.paginacion'));
 
             $total = DB::table('inscripciones')
                             ->join('estudiantes','estudiantes.id', '=','inscripciones.estudiante_id')
                             ->join('carreras','carreras.id', '=','inscripciones.carrera_id')
-                            ->join('horarios','horarios.id', '=','inscripciones.tipo_id')
-                            ->join('tipos','tipos.id', '=','inscripciones.horario_id')
+                            ->join('horarios','horarios.id', '=','inscripciones.horario_id')
+                            ->join('tipos','tipos.id', '=','inscripciones.tipo_id')
                             ->where('estudiantes.'.$filtro,'like','%'.$criterio.'%')
                             ->count();
 
             $suma = DB::table('inscripciones')
                             ->join('estudiantes','estudiantes.id', '=','inscripciones.estudiante_id')
                             ->join('carreras','carreras.id', '=','inscripciones.carrera_id')
-                            ->join('horarios','horarios.id', '=','inscripciones.tipo_id')
-                            ->join('tipos','tipos.id', '=','inscripciones.horario_id')
-                            //->select('inscripciones.monto')
+                            ->join('horarios','horarios.id', '=','inscripciones.horario_id')
+                            ->join('tipos','tipos.id', '=','inscripciones.tipo_id')
                             ->where('estudiantes.'.$filtro,'like','%'.$criterio.'%')
                             ->sum('inscripciones.monto');
+
             return view('inscription.control_index',compact('inscripciones','criterio','filtro','total','suma'));
         }else
         {
@@ -215,14 +208,10 @@ class InscriptionController extends Controller
                         ->where('mensualidades.inscripcion_id',$id)
                         ->get();
                         
-        //return dd($mensualidades);
         $ult_men = DB::table('mensualidades')
                     ->where('mensualidades.inscripcion_id',$id)
                     ->orderBy('num_mens','desc')
                     ->first();
-
-        //return $ult_men;
-        //return Carbon::parse($ult_men->fecha_final)->addMonth();
         return view('inscription.control_show',compact('estudiante','mensualidades','ult_men'));
     }
 
@@ -236,7 +225,7 @@ class InscriptionController extends Controller
                     ->select('recibos.*','users.name', 'estudiantes.nombres','estudiantes.apellidos_paterno','estudiantes.apellidos_materno','carreras.nombre as carrera')
                     ->where('recibos.id','=',$id)
                     ->first();
-         //return dd($recibo);
+
         $vista = view('inscription.control_recibo',compact('recibo'));
         $pdf = \App::make('dompdf.wrapper');
         $pdf->loadHTML($vista);
@@ -257,18 +246,27 @@ class InscriptionController extends Controller
                 ->select('inscripciones.*','mensualidades.estado as estado')
                 ->where('mensualidades.id','=',$id)
                 ->first();
-        //return $insc->estado_men;
+
         $insc_id = $insc->id;
         $estado = $insc->estado;
         $estudiante_id = $insc->estudiante_id;
-        //return $estudiante_id;
-        return view('inscription.control_pagos',compact('pagos','id','insc_id','estado','estudiante_id'));
+
+        if (count($pagos) > 0) {
+            return view('inscription.control_pagos',compact('pagos','id','insc_id','estado','estudiante_id'));
+        } else {
+            return redirect()->back()->with(['message' => 'No Tienes pago mas pagos en esta mesualidad', 'alert-type' => 'info']);
+        }
+        
+
+        
     }
 
     public function control_pagos_storage(Request $request)
     {
         $num_recibo = DB::table('recibos')->count()+1;
         $num_recibo = str_pad($num_recibo,6,'0',STR_PAD_LEFT).'/'.Carbon::now()->year;
+
+        //recibos
         $recibo = $recibo = Recibo::create([
         'fecha' => Carbon::now(),
         'numero' => $num_recibo,
@@ -299,7 +297,6 @@ class InscriptionController extends Controller
         $mensualidad->recibo_id = $recibo->id;
         $mensualidad->save();
 
-        //return redirect()->route('mensualidades_mi.show',$request->insc);   
         return redirect('/admin/inscription/control/show/'.$request->insc)->with(['message' => "Pago Realizado correctamente.", 'alert-type' => 'info']);
     }
 
@@ -361,7 +358,7 @@ class InscriptionController extends Controller
             ]);
             
         }
-        //return redirect()->route('mensualidades_mi.show', $request->insc);
+
         return redirect('/admin/inscription/control/show/'.$request->insc)->with(['message' => 'Pago realizado correctamente.']);
     }
 
@@ -411,16 +408,61 @@ class InscriptionController extends Controller
         
         \Storage::disk('imagenes_isc')->put($request->ruta->getClientOriginalName(), \File::get($request->ruta));
 
-        //return $request->all();
         return redirect('/admin/inscription/control/imagenes/'.$request->insc_id)->with(['message' => "Imagen Cargada Correctamente", 'alert-type' => 'info']);
     }
 
     public function control_imagenes_delete($id, $insc)
     {   
-        //return $id;
         DB::table('imagenes_insc')
             ->where('id', $id)
             ->update(['estado' => false]);
         return redirecT('/admin/inscription/control/imagenes/'.$insc)->with(['message' => "Imagen eliminada correctamente", 'alert-type' => 'info']);
     }   
+
+    public function control_estado(Request $datos)
+    {
+        $insc = Inscripcione::find($datos->insc_id);
+        if($insc->estado)
+        {
+            $insc->estado = false;
+        }else
+        {
+            $insc->estado = true;
+        }
+        $insc->save();
+
+        InscEstado::create([
+            'fecha' => Carbon::now(),
+            'user_id' => Auth::user()->id,
+            'insc_id' => $insc->id,
+            'observacion' => $datos->observ
+        ]);
+
+        return redirect()->back()->with(['message' => "Estudiante Actualizado", 'alert-type' => 'info']);
+    } 
+    public function control_deudores()
+    {
+        $insc = DB::table('mensualidades')
+                ->join('inscripciones','inscripciones.id','mensualidades.inscripcion_id')
+                ->join('estudiantes','estudiantes.id','inscripciones.estudiante_id')
+                ->select('inscripciones.id', 'inscripciones.fecha_inicio', 'estudiantes.num_documento', 'estudiantes.nombres', 'estudiantes.apellidos_paterno', 'estudiantes.apellidos_materno', DB::raw('MAX(mensualidades.fecha_final) as ultimo'))
+                ->where([['inscripciones.estado',true],['mensualidades.fecha_final','<',Carbon::now()]])
+                ->groupBy('inscripciones.id','inscripciones.fecha_inicio', 'estudiantes.num_documento','estudiantes.nombres', 'estudiantes.apellidos_paterno', 'estudiantes.apellidos_materno')
+                ->get();
+                
+        return view('inscription.control_deudores',compact('insc'));
+    }
+
+    public function control_notas($insc)
+    {
+        $notas = DB::table('notas')
+                ->join('programaciones','programaciones.id','notas.programacion_id')
+                ->join('asignaturas','asignaturas.id','programaciones.asignatura_id')
+                ->join('educadores','educadores.id','programaciones.educador_id')
+                ->join('inscripciones','inscripciones.id','notas.insc_id')
+                ->where('notas.insc_id',$insc)
+                ->select('notas.*','asignaturas.nombre','educadores.nombres','educadores.apellidos')
+                ->get();
+        return view('inscription.control_notas',compact('notas'));
+    }
 }

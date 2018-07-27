@@ -39,8 +39,8 @@
                                 <li class="nav-item"> <a class="nav-link active" href="#home">INICIO <span class="sr-only">(current)</span></a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#features">DESCRIPCIÓN</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#gallery">CAPTURAS</a> </li>
-                                <!-- <li class="nav-item"> <a class="nav-link" href="#pricing">PRICING</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#contact">CONTACT</a> </li> -->
+                                <!-- <li class="nav-item"> <a class="nav-link" href="#pricing">PRICING</a> </li>-->
+                                <li class="nav-item"> <a class="nav-link" href="#contact">REGISTRO</a> </li> 
                                 <li class="nav-item"><a href="{{ route('voyager.login') }}" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">ENTRAR</a></li>
                             </ul>
                         </div>
@@ -470,10 +470,10 @@
     </div> -->
     <!-- // end .section -->
 
-    <!-- <div class="light-bg py-5" id="contact">
+    <div class="light-bg py-5" id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 text-center text-lg-left">
+                <!-- <div class="col-lg-6 text-center text-lg-left">
                     <p class="mb-2"> <span class="ti-location-pin mr-2"></span> 1485 Pacific St, Brooklyn, NY 11216 USA</p>
                     <div class=" d-block d-sm-inline-block">
                         <p class="mb-2">
@@ -485,7 +485,6 @@
                             <span class="ti-headphone-alt mr-2"></span> <a href="tel:51836362800">518-3636-2800</a>
                         </p>
                     </div>
-
                 </div>
                 <div class="col-lg-6">
                     <div class="social-icons">
@@ -494,11 +493,34 @@
                         <a href="#"><span class="ti-instagram"></span></a>
                     </div>
                 </div>
+            </div> -->
+
+            <div class="col-sm-6 offset-sm-3">
+                <form action="{{ url('/register') }}" method="POST">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <label for="">Nombre</label>
+                        <input type="text" name="name" placehober="Nombre" class="form-control" required>
+                    </div>
+                 
+                    <div class="form-group">
+                        <label for="">Correo</label>
+                        <input type="email" name="email" placehober="Nombre" class="form-control" required>
+                    </div>
+   
+
+                    <div class="form-group">
+                        <label for="">Contraseña</label>
+                        <input type="password" name="password" placehober="Nombre" class="form-control" required>
+                       
+                    </div>
+                    <button class="btn btn-sm btn-primary" type="submimt">
+                        Enviar
+                    </button>
+                </form>
             </div>
 
-        </div>
-
-    </div> -->
+    </div>
     <!-- // end .section -->
     <footer class="my-5 text-center">
         <!-- Copyright removal is not prohibited! -->

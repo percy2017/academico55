@@ -15,7 +15,7 @@
 					<tr>
 	                  <td colspan="" rowspan="" headers="">
 	                    <div style="text-align: left;">
-	                     	<img src="{{ storage_path('app/public/logos/logo1.jpeg') }}" width="80px" alt="">
+	                     	<img src="{{ asset('storage/settings/July2018/logo.jpeg') }}" width="80px" alt="">
 							<br><small>{{setting('admin.description')}}</small>
 	                   </div>
 	                  </td>

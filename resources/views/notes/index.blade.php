@@ -17,7 +17,7 @@
                 <i class='voyager-group'></i>
                 <!-- <h4>Usuarios</h4> -->
                 <!--    <p></p> -->
-                <a href="{{ route('voyager.users.index') }}" class="btn btn-primary btn-lg">CONTROL</a>
+                <a href="{{ url('/admin/notes/index') }}" class="btn btn-primary btn-lg">CONTROL</a>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
                 <i class='voyager-settings'></i>
                 <!-- <h4>Usuarios</h4> -->
                 <!--    <p></p> -->
-                <a href="{{ route('voyager.roles.index') }}" class="btn btn-primary btn-lg">ESTUDIANTES</a>
+                <a href="#" class="btn btn-primary btn-lg">ESTUDIANTES</a>
             </div>
         </div>
     </div>
