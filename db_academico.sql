@@ -1,22 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 27-07-2018 a las 20:44:02
--- Versión del servidor: 10.1.26-MariaDB
--- Versión de PHP: 7.1.9
+-- Servidor: localhost:3306
+-- Tiempo de generación: 28-07-2018 a las 01:16:04
+-- Versión del servidor: 5.6.38
+-- Versión de PHP: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de datos: `db_academico`
@@ -1457,15 +1449,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', '$2y$10$KEzi5hT.xevsy5S2.NA98.eBWFGTebLBRJFMFEzSF/PCeZIVWE3A2', 'UE6FbEFA9eWk5tHiSpA0YXX3IYYzHFGhn4vOfcRuIfSUR2lxxSPT4o6KrQXN', NULL, '2018-07-20 18:48:41', '2018-07-20 18:48:41'),
-(2, 2, 'luis flores', 'admin@admin.com', 'users\\July2018\\NedQfDuaTZys4Zm0bVFS.jpg', '$2y$10$y2Oi7.xlkEADxKRekdHq1OyS/lTCiH4B2iSbbLyZAmIWSnwf1/jea', NULL, '{\"locale\":\"en\"}', '2018-07-21 01:23:55', '2018-07-24 02:13:58'),
-(3, 2, 'hernan pino', 'hernan.pino@admin.com', 'users/default.png', '$2y$10$.uG2q74CozCni21qTzf3rOvZ/j7fg60TVrbXLT/NcRMkK3rFnxep2', NULL, NULL, '2018-07-24 19:58:23', '2018-07-24 19:58:24'),
-(4, 2, 'paulo suarez', 'paulo.suarez@admin.com', 'users/default.png', '$2y$10$.nSgZpUTocbKTyLzX4a8E.a2TGNZmT4Epw1GlJ9.a6muvW3wJlYXu', '8n7yaTSGj7c9FYUCktpPT6CNZi6LFDWXQWw946qxMVNPard5LwPDGoRN6VSS', NULL, '2018-07-24 20:03:26', '2018-07-24 20:03:26'),
-(5, 2, 'Fernando alcides', 'fernando.alcides@admin.com', 'users/default.png', '$2y$10$Dh1LgSCoQ231NKWjWY4jF.Sni4wqEpPSYhLtM7L8opKwpGo8wZUGC', 'j8PqEJlyL6kGPznP9GsjPBJdtKalTwDlKYIoBIgd3G0ovpzpKaiu1eL4hJ22', NULL, '2018-07-24 20:09:14', '2018-07-24 20:09:15'),
-(6, 2, 'pedro garcia', 'pedro.garcia@admin.com', 'users\\July2018\\wW8pPEY3CQ8xkN7mWRfr.jpg', '$2y$10$VeESM2t2Q7MQiCHy5yj79ena40SMBj9JPECrHvGEdM3/MOgccpG9m', 'j9XZm10sOF14iJYWjzlaWRQTEx4YwSCYls9M26jD4MMEzaZTa7uivqsLWosl', '{\"locale\":\"es\"}', '2018-07-24 20:10:36', '2018-07-24 20:21:00'),
-(7, 2, 'luis alpire', 'luis.alpire@admin.com', 'users/default.png', '$2y$10$9HTKTSqKWi38ZE/sf/uEieI1oMIZPtZMg5qqZLNkvnbxrm/DMvNKy', 'oOqk8nNo58Z4KoeseQE4CCRDsG9TO0Z2YXtb6p9sUSClYuye9hGKxAVERhaV', NULL, '2018-07-24 20:27:49', '2018-07-24 20:27:49'),
-(8, 2, 'alejandro molina', 'ale.molina@admin.com', 'users/default.png', '$2y$10$iRnYn/hWFQKLFwpLZIvhoeIIgDVcvXJ0e9yo3ehETvXz9ekDGkhUS', '4FzabSdWA1LSf4SdLPOgVTM4h6RhXuRkVzm8t6NLIlu85T9coDVwq7p8ltSH', NULL, '2018-07-24 20:34:40', '2018-07-24 20:34:40'),
-(9, 2, 'juan cholima', 'juan.cholima@admin.com', 'users/default.png', '$2y$10$Q2aFMfgTju05qR2O5RGQ8eYhFi1rSVh5nN8bquJyzIGJyZibLRytm', 'fBcADkA0ZRBeae9XNaXyulXyNkTVLqfLGOQ0B0gPf8akOt5JKUCTpZ2PjPrX', NULL, '2018-07-24 20:38:29', '2018-07-24 20:38:29');
+(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', '$2y$10$KEzi5hT.xevsy5S2.NA98.eBWFGTebLBRJFMFEzSF/PCeZIVWE3A2', 'rDzIVojP6VDAT2cQuF2qH9padggvCuuLjV6cnQtEdMEcDosb0C1Dp2ruHQiV', NULL, '2018-07-20 18:48:41', '2018-07-20 18:48:41');
 
 -- --------------------------------------------------------
 
@@ -1900,7 +1884,7 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas
@@ -1937,8 +1921,3 @@ ALTER TABLE `users`
 ALTER TABLE `user_roles`
   ADD CONSTRAINT `user_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `user_roles_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

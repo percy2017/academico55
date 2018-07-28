@@ -18,4 +18,16 @@ class SecurityController extends Controller
     {
         return view('security.index');
     }
+
+    // public function register(Request $datos)
+    // {
+    //     $user = App\User::create([
+    //         'name' => $datos->name,
+    //         'email' => $datos->email,
+    //         'password' =>  bcrypt($datos->password)
+    //     ]);
+    //     Auth::login($user, true);
+    //     return redirect('/admin/profile')->with(['message' => "Bienvenido al sistema, ".$user->name, 'alert-type' => 'info']);
+    
+    // }
 }

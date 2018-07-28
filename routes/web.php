@@ -11,28 +11,15 @@
 |
 */
 
-use Illuminate\Http\Request;
-
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/register', function (Request $datos) {
-    
-    $user = App\User::create([
-        'name' => $datos->name,
-        'email' => $datos->email,
-        'password' =>  bcrypt($datos->password)
-    ]);
-    Auth::login($user, true);
-    return redirect('/admin/profile')->with(['message' => "Bienvenido al sistema, ".$user->name, 'alert-type' => 'info']);
-});
+Route::post('/register','Auth\RegisterController@register')->name('register');
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
 Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-
-   
+    Voyager::routes();   
 
     Route::get('/security','SecurityController@index');
 
@@ -46,7 +33,6 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/programming/programacion_materias/show/estudiantes/delete/{insc_id}/{prog_id}','ProgrammingController@prog_show_est_delete');
     Route::get('/programming/programacion_materias/show/estudiantes/search/{criterio}/{prog_id}','ProgrammingController@prog_estudiantes_buscar');
  
-
     Route::get('/notes','NotesController@index');
     Route::get('/notes/index','NotesController@notas_index')->name('notas_index');
     Route::get('/notes/show/{id}','NotesController@notas_show');
@@ -70,8 +56,42 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/inscription/control/imagenes/add','InscriptionController@control_imagenes_add');
     Route::get('/inscription/control/imagenes/delete/{id}/{isnc}','InscriptionController@control_imagenes_delete');
     Route::get('/inscription/control/notas/{insc}','InscriptionController@control_notas')->name('control_notas');
-    
-    
 
-    
+});
+
+
+//Clear Cache facade value:
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    return '<h1>Cache facade value cleared</h1>';
+});
+
+//Reoptimized class loader:
+Route::get('/optimize', function() {
+    $exitCode = Artisan::call('optimize');
+    return '<h1>Reoptimized class loader</h1>';
+});
+
+//Route cache:
+Route::get('/route-cache', function() {
+    $exitCode = Artisan::call('route:cache');
+    return '<h1>Routes cached</h1>';
+});
+
+//Clear Route cache:
+Route::get('/route-clear', function() {
+    $exitCode = Artisan::call('route:clear');
+    return '<h1>Route cache cleared</h1>';
+});
+
+//Clear View cache:
+Route::get('/view-clear', function() {
+    $exitCode = Artisan::call('view:clear');
+    return '<h1>View cache cleared</h1>';
+});
+
+//Clear Config cache:
+Route::get('/config-cache', function() {
+    $exitCode = Artisan::call('config:cache');
+    return '<h1>Clear Config cleared</h1>';
 });
